@@ -2,1026 +2,516 @@ import React from "react";
 import { Link } from 'react-router-dom';
 
 // Images and Logo
-import Logo from '../misc/images/logo.png'
-import AboutImage from '../misc/images/about-img.png'
-import crousalImage1 from '../misc/images/img-1.png';
-import crousalImage2 from '../misc/images/img-2.png';
-import crousalImage3 from '../misc/images/img-3.png';
-import crousalImage4 from '../misc/images/img-4.png';
-import crousalImage5 from '../misc/images/img-5.png';
-import quickIcon from '../misc/images/quick-icon.png';
+import Logo from '../misc/img/icon/logo.png';
+import SliderImage2 from '../misc/img/slider/2.png';
+import ServiceIcon1 from '../misc/img/icon/service-icon-1.png';
+import ServiceIcon2 from '../misc/img/icon/service-icon-2.png';
+import ServiceIcon3 from '../misc/img/icon/service-icon-3.png';
+import AboutLogo from '../misc/img/other/about.png';
+import CalltoactionLogo from '../misc/img/other/calltoaction.png';
+
 
 function Index() {
     return (
         <>
-            {/* header top section start */}
-            <div className="header_top_section">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-sm-12">
-                            <div className="header_top_main">
-                                <div className="call_text">
-                                    <Link to="#">
-                                        <span className="padding_right0">
-                                            <i className="fa fa-phone" aria-hidden="true" />
-                                        </span>{" "}
-                                        Call : +01 1234567890
-                                    </Link>
-                                </div>
-                                <div className="call_text_2">
-                                    <Link to="#">
-                                        <span className="padding_right0">
-                                            <i className="fa fa-envelope" aria-hidden="true" />
-                                        </span>{" "}
-                                        demo@gmail.com
-                                    </Link>
-                                </div>
-                                <div className="call_text_1">
-                                    <Link to="#">
-                                        <span className="padding_right0">
-                                            <i className="fa fa-map-marker" aria-hidden="true" />
-                                        </span>{" "}
-                                        Location
-                                    </Link>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {/* header top section end */}
-
-
-            {/* header section start */}
-            <div className="header_section">
-                <div className="container">
-                    <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                        <Link className="navbar-brand" to="#">
-                            <img src={Logo} alt="Logo" />
-                        </Link>
-                        <button
-                            className="navbar-toggler"
-                            type="button"
-                            data-toggle="collapse"
-                            data-target="#navbarSupportedContent"
-                            aria-controls="navbarSupportedContent"
-                            aria-expanded="false"
-                            aria-label="Toggle navigation"
-                        >
-                            <span className="navbar-toggler-icon" />
-                        </button>
-                        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul className="navbar-nav ml-auto">
-                                <li className="nav-item active">
-                                    <Link className="nav-link" to="/">
-                                        Home
-                                    </Link>
-                                </li>
-                                <li className="nav-item">
-                                    <Link className="nav-link" to="/about">
-                                        About
-                                    </Link>
-                                </li>
-                                <li className="nav-item">
-                                    <Link className="nav-link" to="/treatment">
-                                        Treatment
-                                    </Link>
-                                </li>
-                                <li className="nav-item">
-                                    <Link className="nav-link" to="/doctors">
-                                        Doctors
-                                    </Link>
-                                </li>
-                                <li className="nav-item">
-                                    <Link className="nav-link" to="/blog">
-                                        Blog
-                                    </Link>
-                                </li>
-                                <li className="nav-item">
-                                    <Link className="nav-link" to="/contact">
-                                        Contact Us
-                                    </Link>
-                                </li>
-                            </ul>
-                            <form className="form-inline my-2 my-lg-0"></form>
-                        </div>
-                    </nav>
-                    <div className="custom_bg">
-                        <div className="custom_menu">
-                            <ul>
-                                <li className="active">
-                                    <Link to="/">Home</Link>
-                                </li>
-                                <li>
-                                    <Link to="/about">About</Link>
-                                </li>
-                                <li>
-                                    <Link to="/treatment">Treatment</Link>
-                                </li>
-                                <li>
-                                    <Link to="/doctors">Doctors</Link>
-                                </li>
-                                <li>
-                                    <Link to="/blog">Blog</Link>
-                                </li>
-                                <li>
-                                    <Link to="/contact">Contact Us</Link>
-                                </li>
-                            </ul>
-                        </div>
-                        <form className="form-inline my-2 my-lg-0">
-                            <div className="search_btn">
-                                <li>
-                                    <Link to="#">
-                                        <i className="fa fa-user" aria-hidden="true" />
-                                        <span className="signup_text">Login</span>
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link to="#">
-                                        <i className="fa fa-user" aria-hidden="true" />
-                                        <span className="signup_text">Sign Up</span>
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link to="#">
-                                        <i className="fa fa-search" aria-hidden="true" />
-                                    </Link>
-                                </li>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                {/* header section end */}
-
-                {/* banner section start */}
-                <div className="banner_section layout_padding">
+            {/* header area start */}
+            <header>
+                <nav id="header-top" className="navbar navbar-expand-md">
                     <div className="container">
-                        <div className="row">
-                            <div className="col-md-12">
-                                <h1 className="banner_taital">We care Of You</h1>
-                                <p className="banner_text">
-                                    When looking at its layout. The point of using Lorem Ipsum is that
-                                    it has a more-or-less normal distribution of letters, as opposed
-                                    to{" "}
-                                </p>
-                                <div className="read_bt">
-                                    <Link to="#">Read More</Link>
+                        <div className="navbar-header">
+                            <button
+                                type="button"
+                                className="navbar-toggler"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#navigation"
+                                aria-controls="navigation"
+                                aria-expanded="false"
+                                aria-label="Toggle navigation"
+                            >
+                                <span className="icon-bar" />
+                                <span className="icon-bar" />
+                                <span className="icon-bar" />
+                            </button>
+                            <Link className="navbar-brand" to="#">
+                                <img
+                                    src={Logo}
+                                    alt="Logo"
+                                    className="img-responsive"
+                                />
+                            </Link>
+                        </div>
+                        <div className="collapse navbar-collapse" id="navigation">
+                            <ul className="nav nav-pills navbar-nav navbar-right">
+                                <li className="nav-item">
+                                    <Link className="nav-link" to="#subscribe">
+                                        Join the Movement
+                                    </Link>
+                                </li>
+                                <li className="nav-item">
+                                    <Link className="nav-link download-btn" to="#">
+                                        Access EMDEEQ
+                                    </Link>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+            {/* header area end */}
+            {/* Slider Area Start */}
+            <div className="background-area image-1" id="slider-area">
+                <div className="slider-full-carousel owl-carousel">
+                    <div className="single-carousel">
+                        <div className="banner-content ">
+                            <div className="container">
+                                <div className="background-content">
+                                    <div className="banner-image hand bnr-sm-none">
+                                        <div className="watch">
+                                            <img src={SliderImage2} alt="SliderImage2" />
+                                        </div>
+                                    </div>
+                                    <div className="row">
+                                        <div className="col-md-9">
+                                            <div className="text-content-wrapper slider">
+                                                <div className="hero-text">
+                                                    <h1>Take Control of Your Healthcare Journey</h1>
+                                                    <p>
+                                                        EMDEEQ is your AI-powered health advocate for navigating
+                                                        diagnoses, interpreting medical scans, and simplifying
+                                                        the complexities of healthcare.
+                                                    </p>
+                                                    <Link to="https://app.angelai.io" className="hero-btn">
+                                                        Access EMDEEQ Now
+                                                    </Link>{" "}
+                                                    &nbsp;
+                                                    <Link
+                                                        className="hero-btn video-popup"
+                                                        to="https://www.youtube.com/watch?v=DUVqASs7iGg"
+                                                    >
+                                                        <i className="icofont icofont-play-alt-2 mr-1" /> &nbsp;
+                                                        Learn More
+                                                    </Link>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                {/* banner section end */}
             </div>
-            {/* header section end */}
-
-
-            {/* appointment section start */}
-            <div className="appointment_section">
+            {/* Slider Area End */}
+            {/* service area start */}
+            <section className="service-area gray-bg">
                 <div className="container">
-                    <div className="appointment_box">
-                        <div className="row">
-                            <div className="col-md-12">
-                                <h1 className="appointment_taital">
-                                    Book <span style={{ color: "#0cb7d6" }}>Appointment</span>
-                                </h1>
+                    <div className="row">
+                        <div className="col-lg-4 col-md-6">
+                            <div className="single-service">
+                                <div className="service-icon">
+                                    <img src={ServiceIcon1} alt="ServiceIcon1" />
+                                </div>
+                                <div className="service-content">
+                                    <h2>Always Available</h2>
+                                    <p>
+                                        At home or in the doctor’s office, EMDEEQ provides real-time
+                                        support anywhere you need it.
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                        <div className="appointment_section_2">
-                            <div className="row">
-                                <div className="col-md-4">
-                                    <p className="doctorname_text">Patient Name</p>
-                                    <input
-                                        type="text"
-                                        className="email_text"
-                                        placeholder=""
-                                        name=""
-                                    />
+                        <div className="col-lg-4 col-md-6">
+                            <div className="single-service">
+                                <div className="service-icon">
+                                    <img src={ServiceIcon2} alt="ServiceIcon2" />
                                 </div>
-                                <div className="col-md-4">
-                                    <form>
-                                        <div className="form-group">
-                                            <p className="doctorname_text">Doctor's Name</p>
-                                            <select className="form-control" id="">
-                                                <option>Normal distribution </option>
-                                                <option>200</option>
-                                                <option>300</option>
-                                                <option>400</option>
-                                                <option>500</option>
-                                            </select>
-                                        </div>
-                                    </form>
-                                </div>
-                                <div className="col-md-4">
-                                    <form>
-                                        <div className="form-group">
-                                            <p className="doctorname_text">Department's Name</p>
-                                            <select className="form-control" id="">
-                                                <option>Normal distribution </option>
-                                                <option>2</option>
-                                                <option>3</option>
-                                                <option>4</option>
-                                                <option>5</option>
-                                            </select>
-                                        </div>
-                                    </form>
+                                <div className="service-content">
+                                    <h2>Reliable Insight</h2>
+                                    <p>
+                                        EMDEEQ draws on rigorously researched medical articles to
+                                        provide well-informed insights.
+                                    </p>
                                 </div>
                             </div>
-                            <div className="row">
-                                <div className="col-md-4">
-                                    <p className="doctorname_text">Phone Number</p>
-                                    <input
-                                        type="text"
-                                        className="email_text"
-                                        placeholder=""
-                                        name=""
-                                    />
+                        </div>
+                        <div className="col-lg-4 col-md-6">
+                            <div className="single-service">
+                                <div className="service-icon">
+                                    <img src={ServiceIcon3} alt="ServiceIcon3" />
                                 </div>
-                                <div className="col-md-4">
-                                    <form>
-                                        <div className="form-group">
-                                            <p className="doctorname_text">Department</p>
-                                            <select className="form-control" id="">
-                                                <option>Normal distribution</option>
-                                                <option>2</option>
-                                                <option>3</option>
-                                                <option>4</option>
-                                                <option>5</option>
-                                            </select>
-                                        </div>
-                                    </form>
-                                </div>
-                                <div className="col-md-4">
-                                    <p className="doctorname_text">Choose Date</p>
-                                    <input id="datepicker" placeholder="Select Date" width={270} />
+                                <div className="service-content">
+                                    <h2>Informed Guidance</h2>
+                                    <p>
+                                        EMDEEQ helps you ask the right questions to ensure nothing is
+                                        overlooked by your provider.
+                                    </p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            {/* appointment section end */}
-
-
-            {/* about section start */}
-            <div className="about_section layout_padding">
+            </section>
+            {/* service area start */}
+            {/* About area start */}
+            <section id="about" className="about-area pt-130">
                 <div className="container">
                     <div className="row">
                         <div className="col-md-6">
-                            <h1 className="about_taital">About Hospital</h1>
-                            <p className="about_text">
-                                {" "}
-                                has a more-or-less normal distribution of letters, as opposed to
-                                using 'Content here, content here', making it look like readable
-                                English. Many desktop publishing packages and web page editors has a
-                                more-or-less normal distribution of letters, as o
-                            </p>
-                            <div className="about_bt">
-                                <Link to="#">Read More</Link>
+                            <div className="about-img">
+                                <img src={AboutLogo} alt="AboutLogo" />
                             </div>
                         </div>
                         <div className="col-md-6">
-                            <div className="about_img">
-                                <img src={AboutImage} alt='AboutImage' />
+                            <div className="about-content">
+                                <h2>Empowering Patients by Demystifying Healthcare</h2>
+                                <p>
+                                    EMDEEQ can give you instant access to trusted, actionable
+                                    information about your diagnosis and help you navigate the medical
+                                    billing system at the same time.
+                                </p>
+                                <p>
+                                    Prepare for every doctor’s visit and every phone call with
+                                    confidence by knowing the right questions to ask. EMDEEQ empowers
+                                    you in your healthcare journey.
+                                </p>
+                                <p>
+                                    For deeper insights, EMDEEQ can analyze medical imaging like MRIs
+                                    and CT scans, translating complex data into easy-to-understand
+                                    information.
+                                </p>
+                                <Link
+                                    className="hero-btn video-popup"
+                                    to="https://www.youtube.com/watch?v=fkoEj95puX0"
+                                >
+                                    <i className="icofont icofont-play-alt-2" />
+                                    Learn More
+                                </Link>
+                                <p />
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            {/* about section end */}
-
-
-            {/* treatment section start */}
-            <div className="treatment_section layout_padding">
+            </section>
+            {/* About area End */}
+            {/* Feature area start */}
+            <section id="features" className="feature-area gray-bg pt-128 pb-70">
                 <div className="container">
                     <div className="row">
-                        <div className="col-md-12">
-                            <h1 className="treatment_taital">Hospital Treatment</h1>
+                        <div className="col-12">
+                            <div className="section-heading pb-55 text-center">
+                                <h2>Essential Support Features</h2>
+                                <p>
+                                    EMDEEQ cuts through the noise, giving users instant access to
+                                    actionable information with the press of a button.
+                                </p>
+                            </div>
                         </div>
                     </div>
-                    <div className="treatment_section_2">
-                        <div className="row">
-                            <div className="col-lg-3 col-sm-6">
-                                <h1 className="number_text">01</h1>
-                                <h2 className="care_text">Nephrologist Care</h2>
-                                <p className="treatment_text">
-                                    alteration in some form, by injected humour, or randomised words
-                                    which don't look even slightly e sure there isn't anything
-                                </p>
-                                <div className="readmore_bt active">
-                                    <Link to="#">Read More</Link>
+                    <div className="row">
+                        <div className="col-lg-4 col-md-6">
+                            <div className="awesome-feature text-center">
+                                <div className="awesome-feature-icon">
+                                    <span>
+                                        <i className="icofont icofont-files" />
+                                    </span>
+                                </div>
+                                <div className="awesome-feature-details">
+                                    <h5>Diagnostic Analysis</h5>
+                                    <p>Expert insights into your medical diagnosis.</p>
                                 </div>
                             </div>
-                            <div className="col-lg-3 col-sm-6">
-                                <h1 className="number_text">02</h1>
-                                <h2 className="care_text">Eye Care</h2>
-                                <p className="treatment_text_1">
-                                    alteration in some form, by injected humour, or randomised words
-                                    which don't look even{" "}
-                                </p>
-                                <div className="readmore_bt">
-                                    <Link to="#">Read More</Link>
+                        </div>
+                        <div className="col-lg-4 col-md-6">
+                            <div className="awesome-feature text-center">
+                                <div className="awesome-feature-icon">
+                                    <span>
+                                        <i className="icofont icofont-doctor" />
+                                    </span>
+                                </div>
+                                <div className="awesome-feature-details">
+                                    <h5>Symptom Review</h5>
+                                    <p>Review your symptoms for clarity and guidance.</p>
                                 </div>
                             </div>
-                            <div className="col-lg-3 col-sm-6">
-                                <h1 className="number_text">03</h1>
-                                <h2 className="care_text">Pediatrician Clinic</h2>
-                                <p className="treatment_text_1">
-                                    alteration in some form, by injected humour, or randomised words
-                                    which don't look even
-                                </p>
-                                <div className="readmore_bt">
-                                    <Link to="#">Read More</Link>
+                        </div>
+                        <div className="col-lg-4 col-md-6">
+                            <div className="awesome-feature text-center">
+                                <div className="awesome-feature-icon">
+                                    <span>
+                                        <i className="icofont icofont-idea" />
+                                    </span>
+                                </div>
+                                <div className="awesome-feature-details">
+                                    <h5>Care Insights</h5>
+                                    <p>Critically evaluate your providers plan of care.</p>
                                 </div>
                             </div>
-                            <div className="col-lg-3 col-sm-6">
-                                <h1 className="number_text">04</h1>
-                                <h2 className="care_text">Prenatal Care</h2>
-                                <p className="treatment_text_1">
-                                    alteration in some form, by injected humour, or randomised words
-                                    which don't look even
-                                </p>
-                                <div className="readmore_bt">
-                                    <Link to="#">Read More</Link>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-lg-4 col-md-6">
+                            <div className="awesome-feature text-center">
+                                <div className="awesome-feature-icon">
+                                    <span>
+                                        <i className="icofont icofont-ui-clip-board" />
+                                    </span>
+                                </div>
+                                <div className="awesome-feature-details">
+                                    <h5>Imaging Upload</h5>
+                                    <p>Imaging insights to help ensure nothing is overlooked.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-lg-4 col-md-6">
+                            <div className="awesome-feature text-center">
+                                <div className="awesome-feature-icon">
+                                    <span>
+                                        <i className="icofont icofont-first-aid-alt" />
+                                    </span>
+                                </div>
+                                <div className="awesome-feature-details">
+                                    <h5>Billing Guidance</h5>
+                                    <p>
+                                        Insights to help approach bureaucracy and billing strategically.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-lg-4 col-md-6">
+                            <div className="awesome-feature text-center">
+                                <div className="awesome-feature-icon">
+                                    <span>
+                                        <i className="icofont icofont-support" />
+                                    </span>
+                                </div>
+                                <div className="awesome-feature-details">
+                                    <h5>Open Chat</h5>
+                                    <p>Discuss your issues with privacy, support, and dignity.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            {/* treatment section end */}
-
-
-            {/* doctores section start */}
-            <div className="doctores_section">
+            </section>
+            {/* Feature feature area end */}
+            {/* Call to Action area start */}
+            <section id="call-to-action" className="about-area pt-130">
                 <div className="container">
                     <div className="row">
-                        <div className="col-md-12">
-                            <h1 className="doctores_taital">Our doctores</h1>
-                        </div>
-                    </div>
-                    <div className="doctores_section_2">
-                        <div id="my_slider" className="carousel slide" data-ride="carousel">
-                            <div className="carousel-inner">
-                                <div className="carousel-item active">
-                                    <div className="row">
-                                        <div className="col-md-4">
-                                            <div className="doctores_box">
-                                                <div className="image_1">
-                                                    <img src={crousalImage1} alt="crousalImage1" />
-                                                </div>
-                                                <h4 className="humour_text">
-                                                    Humour <br />
-                                                    <span className="mbbs_text">MBBS</span>
-                                                </h4>
-                                                <div className="social_icon">
-                                                    <ul>
-                                                        <li>
-                                                            <Link to="#">
-                                                                <i className="fa fa-facebook" aria-hidden="true" />
-                                                            </Link>
-                                                        </li>
-                                                        <li>
-                                                            <Link to="#">
-                                                                <i className="fa fa-twitter" aria-hidden="true" />
-                                                            </Link>
-                                                        </li>
-                                                        <li>
-                                                            <Link to="#">
-                                                                <i className="fa fa-linkedin" aria-hidden="true" />
-                                                            </Link>
-                                                        </li>
-                                                        <li>
-                                                            <Link to="#">
-                                                                <i className="fa fa-instagram" aria-hidden="true" />
-                                                            </Link>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="col-md-4">
-                                            <div className="doctores_box">
-                                                <div className="image_1">
-                                                    <img src={crousalImage2} alt="crousalImage2" />
-                                                </div>
-                                                <h4 className="humour_text">
-                                                    Jenni <br />
-                                                    <span className="mbbs_text">MBBS</span>
-                                                </h4>
-                                                <div className="social_icon">
-                                                    <ul>
-                                                        <li>
-                                                            <Link to="#">
-                                                                <i className="fa fa-facebook" aria-hidden="true" />
-                                                            </Link>
-                                                        </li>
-                                                        <li>
-                                                            <Link to="#">
-                                                                <i className="fa fa-twitter" aria-hidden="true" />
-                                                            </Link>
-                                                        </li>
-                                                        <li>
-                                                            <Link to="#">
-                                                                <i className="fa fa-linkedin" aria-hidden="true" />
-                                                            </Link>
-                                                        </li>
-                                                        <li>
-                                                            <Link to="#">
-                                                                <i className="fa fa-instagram" aria-hidden="true" />
-                                                            </Link>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="col-md-4">
-                                            <div className="doctores_box">
-                                                <div className="image_1">
-                                                    <img src={crousalImage3} alt="crousalImage3" />
-                                                </div>
-                                                <h4 className="humour_text">
-                                                    Morco <br />
-                                                    <span className="mbbs_text">MBBS</span>
-                                                </h4>
-                                                <div className="social_icon">
-                                                    <ul>
-                                                        <li>
-                                                            <Link to="#">
-                                                                <i className="fa fa-facebook" aria-hidden="true" />
-                                                            </Link>
-                                                        </li>
-                                                        <li>
-                                                            <Link to="#">
-                                                                <i className="fa fa-twitter" aria-hidden="true" />
-                                                            </Link>
-                                                        </li>
-                                                        <li>
-                                                            <Link to="#">
-                                                                <i className="fa fa-linkedin" aria-hidden="true" />
-                                                            </Link>
-                                                        </li>
-                                                        <li>
-                                                            <Link to="#">
-                                                                <i className="fa fa-instagram" aria-hidden="true" />
-                                                            </Link>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="carousel-item">
-                                    <div className="row">
-                                        <div className="col-md-4">
-                                            <div className="doctores_box">
-                                                <div className="image_1">
-                                                    <img src={crousalImage1} alt="crousalImage1" />
-                                                </div>
-                                                <h4 className="humour_text">
-                                                    Humour <br />
-                                                    <span className="mbbs_text">MBBS</span>
-                                                </h4>
-                                                <div className="social_icon">
-                                                    <ul>
-                                                        <li>
-                                                            <Link to="#">
-                                                                <i className="fa fa-facebook" aria-hidden="true" />
-                                                            </Link>
-                                                        </li>
-                                                        <li>
-                                                            <Link to="#">
-                                                                <i className="fa fa-twitter" aria-hidden="true" />
-                                                            </Link>
-                                                        </li>
-                                                        <li>
-                                                            <Link to="#">
-                                                                <i className="fa fa-linkedin" aria-hidden="true" />
-                                                            </Link>
-                                                        </li>
-                                                        <li>
-                                                            <Link to="#">
-                                                                <i className="fa fa-instagram" aria-hidden="true" />
-                                                            </Link>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="col-md-4">
-                                            <div className="doctores_box">
-                                                <div className="image_1">
-                                                    <img src={crousalImage2} alt="crousalImage2" />
-                                                </div>
-                                                <h4 className="humour_text">
-                                                    Jenni <br />
-                                                    <span className="mbbs_text">MBBS</span>
-                                                </h4>
-                                                <div className="social_icon">
-                                                    <ul>
-                                                        <li>
-                                                            <Link to="#">
-                                                                <i className="fa fa-facebook" aria-hidden="true" />
-                                                            </Link>
-                                                        </li>
-                                                        <li>
-                                                            <Link to="#">
-                                                                <i className="fa fa-twitter" aria-hidden="true" />
-                                                            </Link>
-                                                        </li>
-                                                        <li>
-                                                            <Link to="#">
-                                                                <i className="fa fa-linkedin" aria-hidden="true" />
-                                                            </Link>
-                                                        </li>
-                                                        <li>
-                                                            <Link to="#">
-                                                                <i className="fa fa-instagram" aria-hidden="true" />
-                                                            </Link>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="col-md-4">
-                                            <div className="doctores_box">
-                                                <div className="image_1">
-                                                    <img src={crousalImage3} alt="crousalImage3" />
-                                                </div>
-                                                <h4 className="humour_text">
-                                                    Morco <br />
-                                                    <span className="mbbs_text">MBBS</span>
-                                                </h4>
-                                                <div className="social_icon">
-                                                    <ul>
-                                                        <li>
-                                                            <Link to="#">
-                                                                <i className="fa fa-facebook" aria-hidden="true" />
-                                                            </Link>
-                                                        </li>
-                                                        <li>
-                                                            <Link to="#">
-                                                                <i className="fa fa-twitter" aria-hidden="true" />
-                                                            </Link>
-                                                        </li>
-                                                        <li>
-                                                            <Link to="#">
-                                                                <i className="fa fa-linkedin" aria-hidden="true" />
-                                                            </Link>
-                                                        </li>
-                                                        <li>
-                                                            <Link to="#">
-                                                                <i className="fa fa-instagram" aria-hidden="true" />
-                                                            </Link>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="carousel-item">
-                                    <div className="row">
-                                        <div className="col-md-4">
-                                            <div className="doctores_box">
-                                                <div className="image_1">
-                                                    <img src={crousalImage1} alt="crousalImage1" />
-                                                </div>
-                                                <h4 className="humour_text">
-                                                    Humour <br />
-                                                    <span className="mbbs_text">MBBS</span>
-                                                </h4>
-                                                <div className="social_icon">
-                                                    <ul>
-                                                        <li>
-                                                            <Link to="#">
-                                                                <i className="fa fa-facebook" aria-hidden="true" />
-                                                            </Link>
-                                                        </li>
-                                                        <li>
-                                                            <Link to="#">
-                                                                <i className="fa fa-twitter" aria-hidden="true" />
-                                                            </Link>
-                                                        </li>
-                                                        <li>
-                                                            <Link to="#">
-                                                                <i className="fa fa-linkedin" aria-hidden="true" />
-                                                            </Link>
-                                                        </li>
-                                                        <li>
-                                                            <Link to="#">
-                                                                <i className="fa fa-instagram" aria-hidden="true" />
-                                                            </Link>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="col-md-4">
-                                            <div className="doctores_box">
-                                                <div className="image_1">
-                                                    <img src={crousalImage2} alt="crousalImage2" />
-                                                </div>
-                                                <h4 className="humour_text">
-                                                    Jenni <br />
-                                                    <span className="mbbs_text">MBBS</span>
-                                                </h4>
-                                                <div className="social_icon">
-                                                    <ul>
-                                                        <li>
-                                                            <Link to="#">
-                                                                <i className="fa fa-facebook" aria-hidden="true" />
-                                                            </Link>
-                                                        </li>
-                                                        <li>
-                                                            <Link to="#">
-                                                                <i className="fa fa-twitter" aria-hidden="true" />
-                                                            </Link>
-                                                        </li>
-                                                        <li>
-                                                            <Link to="#">
-                                                                <i className="fa fa-linkedin" aria-hidden="true" />
-                                                            </Link>
-                                                        </li>
-                                                        <li>
-                                                            <Link to="#">
-                                                                <i className="fa fa-instagram" aria-hidden="true" />
-                                                            </Link>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="col-md-4">
-                                            <div className="doctores_box">
-                                                <div className="image_1">
-                                                    <img src={crousalImage3} alt="crousalImage3" />
-                                                </div>
-                                                <h4 className="humour_text">
-                                                    Morco <br />
-                                                    <span className="mbbs_text">MBBS</span>
-                                                </h4>
-                                                <div className="social_icon">
-                                                    <ul>
-                                                        <li>
-                                                            <Link to="#">
-                                                                <i className="fa fa-facebook" aria-hidden="true" />
-                                                            </Link>
-                                                        </li>
-                                                        <li>
-                                                            <Link to="#">
-                                                                <i className="fa fa-twitter" aria-hidden="true" />
-                                                            </Link>
-                                                        </li>
-                                                        <li>
-                                                            <Link to="#">
-                                                                <i className="fa fa-linkedin" aria-hidden="true" />
-                                                            </Link>
-                                                        </li>
-                                                        <li>
-                                                            <Link to="#">
-                                                                <i className="fa fa-instagram" aria-hidden="true" />
-                                                            </Link>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                        <div className="col-md-6">
+                            <div className="about-content">
+                                <h2>Review Your Diagnosis Now</h2>
+                                <p>
+                                    Access EMDEEQ now for free and experience the difference it makes
+                                    in your health-care journey.
+                                </p>
+                                <p>
+                                    EMDEEQ helps you understand diagnoses, explore treatments,
+                                    interpret scans, and navigate all areas of the healthcare system.
+                                    EMDEEQ is your advocate for better treatment.
+                                </p>
+                                <p>
+                                    If you're looking for an informed second opinion - Chat with
+                                    EMDEEQ now!
+                                </p>
+                                <Link className="hero-btn" to="#">
+                                    Access EMDEEQ Now
+                                </Link>
+                                <p />
                             </div>
-                            <button
-                                className="carousel-control-prev"
-                                type="button"
-                                data-bs-target="#doctors_slider"
-                                data-bs-slide="prev"
-                            >
-                                <i className="fa fa-angle-left" />
-                            </button>
-                            <button
-                                className="carousel-control-next"
-                                type="button"
-                                data-bs-target="#doctors_slider"
-                                data-bs-slide="next"
-                            >
-                                <i className="fa fa-angle-right" />
-                            </button>
+                        </div>
+                        <div className="col-md-6">
+                            <div className="about-img">
+                                <img src={CalltoactionLogo} alt="CalltoactionLogo" />
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            {/* doctores section end */}
-
-
-            {/* testimonial section start */}
-            <div className="testimonial_section layout_padding">
+            </section>
+            {/* Call to Action area End */}
+            {/* Subcribe Area Start */}
+            <section id="subscribe" className="subcribe-area pt-130 pb-115 bg-6">
                 <div className="container">
                     <div className="row">
-                        <div className="col-md-12">
-                            <h1 className="testimonial_taital">Our Testimonial</h1>
+                        <div className="col-12">
+                            <div className="section-heading pb-35 text-center">
+                                <h2>Discoveries Await</h2>
+                                <p>
+                                    Sign up for EMDEEQ's newsletter to receive curated groundbreaking
+                                    medical discoveries delivered directly to your inbox.
+                                </p>
+                            </div>
                         </div>
                     </div>
-                    <div className="customer_section_2">
-                        <div className="row">
-                            <div className="col-md-12">
-                                <div className="box_main">
-                                    <div
-                                        id="main_slider"
-                                        className="carousel slide"
-                                        data-ride="carousel"
-                                    >
-                                        <div className="carousel-inner">
-                                            <div className="carousel-item active">
-                                                <div className="customer_main">
-                                                    <div className="customer_right">
-                                                        <h3 className="customer_name">
-                                                            Morijorch{" "}
-                                                            <span className="quick_icon">
-                                                                <img src={quickIcon} alt="quickIcon" />
-                                                            </span>
-                                                        </h3>
-                                                        <p className="default_text">Default model text,</p>
-                                                        <p className="enim_text">
-                                                            editors now use Lorem Ipsum as their default model
-                                                            text, and a search for 'lorem ipsum' will uncover many
-                                                            web sites still in their infancy. Variouseditors now
-                                                            use Lorem Ipsum as their default model text, and a
-                                                            search for 'lorem ipsum' will uncover many web sites
-                                                            still in their infancy. Variouseditors now use Lorem
-                                                            Ipsum as their default model text, and a search for
-                                                            'lorem ipsum' will uncover many web sites still in
-                                                            their infancy. Various
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="carousel-item">
-                                                <div className="customer_main">
-                                                    <div className="customer_right">
-                                                        <h3 className="customer_name">
-                                                            Morijorch{" "}
-                                                            <span className="quick_icon">
-                                                                <img src={quickIcon} alt="quickIcon" />
-                                                            </span>
-                                                        </h3>
-                                                        <p className="default_text">Default model text,</p>
-                                                        <p className="enim_text">
-                                                            editors now use Lorem Ipsum as their default model
-                                                            text, and a search for 'lorem ipsum' will uncover many
-                                                            web sites still in their infancy. Variouseditors now
-                                                            use Lorem Ipsum as their default model text, and a
-                                                            search for 'lorem ipsum' will uncover many web sites
-                                                            still in their infancy. Variouseditors now use Lorem
-                                                            Ipsum as their default model text, and a search for
-                                                            'lorem ipsum' will uncover many web sites still in
-                                                            their infancy. Various
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="carousel-item">
-                                                <div className="customer_main">
-                                                    <div className="customer_right">
-                                                        <h3 className="customer_name">
-                                                            Morijorch{" "}
-                                                            <span className="quick_icon">
-                                                                <img src={quickIcon} alt="quickIcon" />
-                                                            </span>
-                                                        </h3>
-                                                        <p className="default_text">Default model text,</p>
-                                                        <p className="enim_text">
-                                                            editors now use Lorem Ipsum as their default model
-                                                            text, and a search for 'lorem ipsum' will uncover many
-                                                            web sites still in their infancy. Variouseditors now
-                                                            use Lorem Ipsum as their default model text, and a
-                                                            search for 'lorem ipsum' will uncover many web sites
-                                                            still in their infancy. Variouseditors now use Lorem
-                                                            Ipsum as their default model text, and a search for
-                                                            'lorem ipsum' will uncover many web sites still in
-                                                            their infancy. Various
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <a
-                                            className="carousel-control-prev"
-                                            href="#main_slider"
-                                            role="button"
-                                            data-slide="prev"
-                                        >
-                                            <i className="fa fa-angle-left" />
-                                        </a>
-                                        <a
-                                            className="carousel-control-next"
-                                            href="#main_slider"
-                                            role="button"
-                                            data-slide="next"
-                                        >
-                                            <i className="fa fa-angle-right" />
-                                        </a>
+                    <div className="row">
+                        <div className="col-12">
+                            <div className="subcribe-form text-center">
+                                <form id="mc-form">
+                                    <input
+                                        autoComplete="off"
+                                        placeholder="Enter Your Email"
+                                        type="text"
+                                    />
+                                    <button type="submit">Subscribe</button>
+                                    {/* mailchimp-alerts Start */}
+                                    <div className="mailchimp-alerts text-centre">
+                                        <div className="mailchimp-submitting" />
+                                        <div className="mailchimp-success" />
+                                        <div className="mailchimp-error" />
                                     </div>
-                                </div>
+                                    {/* mailchimp-alerts end */}
+                                </form>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            {/* testimonial section end */}
-
-
-            {/* contact section start */}
-            <div className="contact_section layout_padding">
-                <div className="container-fluid">
-                    <div className="contact_section_2">
-                        <div className="row">
-                            <div className="col-md-6">
-                                <h1 className="contact_taital">Get In Touch</h1>
-                                <form action="">
-                                    <div className="mail_section_1">
-                                        <input
-                                            type="text"
-                                            className="mail_text"
-                                            placeholder="Name"
-                                            name="Name"
-                                        />
-                                        <input
-                                            type="text"
-                                            className="mail_text"
-                                            placeholder="Phone Number"
-                                            name="Phone Number"
-                                        />
-                                        <input
-                                            type="text"
-                                            className="mail_text"
-                                            placeholder="Email"
-                                            name="Email"
-                                        />
-                                        <textarea
-                                            className="massage-bt"
-                                            placeholder="Massage"
-                                            rows={5}
-                                            id="comment"
-                                            name="Massage"
-                                            defaultValue={""}
-                                        />
-                                        <div className="send_bt">
-                                            <Link to="#">SEND</Link>
+            </section>
+            {/* Subcribe Area End */}
+            {/* Contact Area Start */}
+            <div id="contact" className="contact-area pt-130">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-12">
+                            <div className="section-heading pb-55 text-center">
+                                <h2>Contact the Team</h2>
+                                <p>
+                                    Share insights about your medical journey to help develop a more
+                                    empowered medical system. EMDEEQ keeps your information
+                                    confidential and secure.
+                                </p>
+                                <p>
+                                    <Link to="#">Learn More About Our Privacy Policies</Link>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-12">
+                            <div className="contact-wrap">
+                                {/* Contact Form */}
+                                <form
+                                    id="contact-form"
+                                    className="form contact-form"
+                                    action="https://whizthemes.com/mail-php/other/mail.php"
+                                >
+                                    <div className="row">
+                                        <div className="form-group col-12">
+                                            <input
+                                                type="text"
+                                                name="con_name"
+                                                className="form-control"
+                                                id="first-name"
+                                                placeholder="Name"
+                                                required="required"
+                                            />
+                                        </div>
+                                        <div className="form-group col-12 mt-4">
+                                            <input
+                                                type="email"
+                                                name="con_email"
+                                                className="form-control"
+                                                id="email"
+                                                placeholder="Email"
+                                                required="required"
+                                            />
+                                        </div>
+                                        <div className="form-group col-12 mt-4">
+                                            <input
+                                                type="phone"
+                                                name="con_phone"
+                                                className="form-control"
+                                                id="email"
+                                                placeholder="Phone"
+                                                required="required"
+                                            />
+                                        </div>
+                                        <div className="form-group description col-12 mbnone mt-4">
+                                            <textarea
+                                                rows={3}
+                                                name="con_message"
+                                                className="form-control"
+                                                id="description"
+                                                placeholder="Message"
+                                                required="required"
+                                                defaultValue={""}
+                                            />
+                                        </div>
+                                        <div className="col-12 mt-4">
+                                            <div className="actions text-center">
+                                                <button
+                                                    type="submit"
+                                                    name="submit"
+                                                    className="btn btn-lg btn-contact-bg"
+                                                    title="Submit Your Message!"
+                                                >
+                                                    submit
+                                                </button>
+                                                <p className="form-messege" />
+                                            </div>
                                         </div>
                                     </div>
                                 </form>
-                            </div>
-                            <div className="col-md-6 padding_left_15">
-                                <div className="map_main">
-                                    <div className="map-responsive">
-                                    <iframe
-                                        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&q=Eiffel+Tower+Paris+France"
-                                        width={600}
-                                        height={600}
-                                        style={{ border: 0, width: "100%" }}
-                                        allowFullScreen=""
-                                        title="Map showing Eiffel Tower, Paris, France"
-                                    />
-                                    </div>
-                                </div>
+                                {/* Contact Form */}
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            {/* contact section end */}
-
-
-            {/* footer section start */}
-            <div className="footer_section">
+            {/* Contact Area End */}
+            {/* Copyright Area Start */}
+            <div className="copyright-area bg-5 ptb-70">
                 <div className="container">
-                    <div className="input_bt">
-                        <input
-                            type="text"
-                            className="mail_bt"
-                            placeholder="Enter Your Email"
-                            name="Enter your email"
-                        />
-                        <span className="subscribe_bt" id="basic-addon2">
-                            <Link to="#">Subscribe</Link>
-                        </span>
-                    </div>
-                    <div className="footer_section_2">
-                        <div className="row">
-                            <div className="col-lg-3 col-sm-6">
-                                <h3 className="footer_taital">Address</h3>
-                                <div className="location_main">
+                    {/* Contact address left */}
+                    <div className="conct-border row"></div>
+                    {/* Contact address left */}
+                    {/* Copyright right */}
+                    <div className="row">
+                        <div className="col-12">
+                            <div className="copyright-area text-center">
+                                {/* Copyright social */}
+                                <div className="contact-social text-center pt-70 pb-35">
                                     <ul>
                                         <li>
                                             <Link to="#">
-                                                <i className="fa fa-map-marker" aria-hidden="true" />
-                                                <span className="padding_15">
-                                                    Making this the first true
-                                                </span>
+                                                <i className="icofont icofont-social-facebook" />
                                             </Link>
                                         </li>
                                         <li>
                                             <Link to="#">
-                                                <i className="fa fa-phone" aria-hidden="true" />
-                                                <span className="padding_15">Call : +01 1234567890</span>
+                                                <i className="icofont icofont-social-instagram" />
                                             </Link>
                                         </li>
                                         <li>
                                             <Link to="#">
-                                                <i className="fa fa-envelope" aria-hidden="true" />
-                                                <span className="padding_15">Email : demo@gmail.com</span>
+                                                <i className="icofont icofont-social-youtube-play" />
                                             </Link>
                                         </li>
                                     </ul>
                                 </div>
-                                <div className="footer_social_icon">
-                                    <ul>
-                                        <li>
-                                            <Link to="#">
-                                                <i className="fa fa-facebook" aria-hidden="true" />
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link to="#">
-                                                <i className="fa fa-twitter" aria-hidden="true" />
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link to="#">
-                                                <i className="fa fa-linkedin" aria-hidden="true" />
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link to="#">
-                                                <i className="fa fa-instagram" aria-hidden="true" />
-                                            </Link>
-                                        </li>
-                                    </ul>
+                                {/* Copyright social */}
+                                <div className="copyright-text">
+                                    <p>© EMDEEQ LLC - 2024. All Rights Reserved.</p>
+                                    <p>
+                                        <Link
+                                            to="https://terms.angelai.io/"
+                                            id="openTermsModal"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            Terms of Service
+                                        </Link>{" "}
+                                        | info@emdeeq.io
+                                    </p>
                                 </div>
-                            </div>
-                            <div className="col-lg-3 col-sm-6">
-                                <h3 className="footer_taital">Useful Link</h3>
-                                <div className="footer_menu">
-                                    <ul>
-                                        <li className="active">
-                                            <Link to="/">Home</Link>
-                                        </li>
-                                        <li>
-                                            <Link to="/about">About</Link>
-                                        </li>
-                                        <li>
-                                            <Link to="/doctors">Doctors</Link>
-                                        </li>
-                                        <li>
-                                            <Link to="/news">News</Link>
-                                        </li>
-                                        <li>
-                                            <Link to="/treatment">Treatment</Link>
-                                        </li>
-                                        <li>
-                                            <Link to="/contact">Contact Us</Link>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div className="col-lg-3 col-sm-6">
-                                <h3 className="footer_taital">Help &amp; Support</h3>
-                                <p className="ipsum_text">
-                                    Opposed to using 'Content here, content here', making it look like
-                                    readable English. Many desktop publishing packages and web page
-                                </p>
-                            </div>
-                            <div className="col-lg-3 col-sm-6">
-                                <h3 className="footer_taital">News</h3>
-                                <div className="dryfood_text">
-                                    <img src={crousalImage4} alt='crousalImage4' />
-                                    <span className="padding_15">Normal distribution</span>
-                                </div>
-                                <div className="dryfood_text">
-                                    <img src={crousalImage5} alt='crousalImage5' />
-                                    <span className="padding_15">Normal distribution</span>
-                                </div>
+                                {/* Copyright text */}
                             </div>
                         </div>
                     </div>
+                    {/* Copyright right */}
                 </div>
             </div>
-            {/* footer section end */}
-
-
-            {/* copyright section start */}
-            <div className="copyright_section">
-                <div className="container">
-                    <p className="copyright_text">
-                        2024 All Rights Reserved. Design by{" "}
-                        <Link to="https://html.design">Free Html Templates</Link> Distribution By{" "}
-                        <Link to="https://themewagon.com">ThemWagons</Link>
-                    </p>
-                </div>
-            </div>
-            {/* copyright section end */}
+            {/* Copyright Area End */}
+            {/* all js here */}
         </>
 
     );
