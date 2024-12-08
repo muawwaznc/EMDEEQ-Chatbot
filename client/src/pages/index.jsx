@@ -1,3 +1,11 @@
+import { Link } from 'react-router-dom';
+
+// Images and Logo
+import Logo from '../misc/images/logo.png'
+import AboutImage from '../misc/images/about-img.png'
+import crousalImage1 from '../misc/images/img-1.png';
+import crousalImage2 from '../misc/images/img-2.png';
+import crousalImage3 from '../misc/images/img-3.png';
 
 function Index() {
     return (
@@ -38,12 +46,14 @@ function Index() {
                 </div>
             </div>
             {/* header top section end */}
+
+
             {/* header section start */}
             <div className="header_section">
                 <div className="container">
                     <nav className="navbar navbar-expand-lg navbar-light bg-light">
                         <Link className="navbar-brand" to="#">
-                            <img src="images/logo.png" />
+                            <img src={Logo} alt="Logo" />
                         </Link>
                         <button
                             className="navbar-toggler"
@@ -79,7 +89,7 @@ function Index() {
                                     </Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link" to="blog.html">
+                                    <Link className="nav-link" to="/blog">
                                         Blog
                                     </Link>
                                 </li>
@@ -108,7 +118,7 @@ function Index() {
                                     <Link to="/doctors">Doctors</Link>
                                 </li>
                                 <li>
-                                    <Link to="blog.html">Blog</Link>
+                                    <Link to="/blog">Blog</Link>
                                 </li>
                                 <li>
                                     <Link to="/contact">Contact Us</Link>
@@ -139,6 +149,7 @@ function Index() {
                     </div>
                 </div>
                 {/* header section end */}
+
                 {/* banner section start */}
                 <div className="banner_section layout_padding">
                     <div className="container">
@@ -160,6 +171,8 @@ function Index() {
                 {/* banner section end */}
             </div>
             {/* header section end */}
+
+
             {/* appointment section start */}
             <div className="appointment_section">
                 <div className="container">
@@ -245,6 +258,8 @@ function Index() {
                 </div>
             </div>
             {/* appointment section end */}
+
+
             {/* about section start */}
             <div className="about_section layout_padding">
                 <div className="container">
@@ -264,13 +279,15 @@ function Index() {
                         </div>
                         <div className="col-md-6">
                             <div className="about_img">
-                                <img src="images/about-img.png" />
+                                <img src={AboutImage} alt='AboutImage' />
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             {/* about section end */}
+
+
             {/* treatment section start */}
             <div className="treatment_section layout_padding">
                 <div className="container">
@@ -330,6 +347,8 @@ function Index() {
                 </div>
             </div>
             {/* treatment section end */}
+
+
             {/* doctores section start */}
             <div className="doctores_section">
                 <div className="container">
@@ -346,7 +365,7 @@ function Index() {
                                         <div className="col-md-4">
                                             <div className="doctores_box">
                                                 <div className="image_1">
-                                                    <img src="images/img-1.png" />
+                                                    <img src={crousalImage1} alt="crousalImage1" />
                                                 </div>
                                                 <h4 className="humour_text">
                                                     Humour <br />
@@ -381,7 +400,7 @@ function Index() {
                                         <div className="col-md-4">
                                             <div className="doctores_box">
                                                 <div className="image_1">
-                                                    <img src="images/img-2.png" />
+                                                    <img src={crousalImage2} alt="crousalImage2" />
                                                 </div>
                                                 <h4 className="humour_text">
                                                     Jenni <br />
@@ -416,7 +435,7 @@ function Index() {
                                         <div className="col-md-4">
                                             <div className="doctores_box">
                                                 <div className="image_1">
-                                                    <img src="images/img-3.png" />
+                                                    <img src={crousalImage3} alt="crousalImage3" />
                                                 </div>
                                                 <h4 className="humour_text">
                                                     Morco <br />
@@ -455,7 +474,7 @@ function Index() {
                                         <div className="col-md-4">
                                             <div className="doctores_box">
                                                 <div className="image_1">
-                                                    <img src="images/img-1.png" />
+                                                    <img src={crousalImage1} alt="crousalImage1" />
                                                 </div>
                                                 <h4 className="humour_text">
                                                     Humour <br />
@@ -490,7 +509,7 @@ function Index() {
                                         <div className="col-md-4">
                                             <div className="doctores_box">
                                                 <div className="image_1">
-                                                    <img src="images/img-2.png" />
+                                                    <img src={crousalImage2} alt="crousalImage2" />
                                                 </div>
                                                 <h4 className="humour_text">
                                                     Jenni <br />
@@ -525,7 +544,7 @@ function Index() {
                                         <div className="col-md-4">
                                             <div className="doctores_box">
                                                 <div className="image_1">
-                                                    <img src="images/img-3.png" />
+                                                    <img src={crousalImage3} alt="crousalImage3" />
                                                 </div>
                                                 <h4 className="humour_text">
                                                     Morco <br />
@@ -564,7 +583,7 @@ function Index() {
                                         <div className="col-md-4">
                                             <div className="doctores_box">
                                                 <div className="image_1">
-                                                    <img src="images/img-1.png" />
+                                                    <img src={crousalImage1} alt="crousalImage1" />
                                                 </div>
                                                 <h4 className="humour_text">
                                                     Humour <br />
@@ -599,7 +618,7 @@ function Index() {
                                         <div className="col-md-4">
                                             <div className="doctores_box">
                                                 <div className="image_1">
-                                                    <img src="images/img-2.png" />
+                                                    <img src={crousalImage2} alt="crousalImage2" />
                                                 </div>
                                                 <h4 className="humour_text">
                                                     Jenni <br />
@@ -634,7 +653,7 @@ function Index() {
                                         <div className="col-md-4">
                                             <div className="doctores_box">
                                                 <div className="image_1">
-                                                    <img src="images/img-3.png" />
+                                                    <img src={crousalImage3} alt="crousalImage3" />
                                                 </div>
                                                 <h4 className="humour_text">
                                                     Morco <br />
@@ -690,6 +709,8 @@ function Index() {
                 </div>
             </div>
             {/* doctores section end */}
+
+
             {/* testimonial section start */}
             <div className="testimonial_section layout_padding">
                 <div className="container">
@@ -805,6 +826,8 @@ function Index() {
                 </div>
             </div>
             {/* testimonial section end */}
+
+
             {/* contact section start */}
             <div className="contact_section layout_padding">
                 <div className="container-fluid">
@@ -865,6 +888,8 @@ function Index() {
                 </div>
             </div>
             {/* contact section end */}
+
+
             {/* footer section start */}
             <div className="footer_section">
                 <div className="container">
@@ -980,6 +1005,8 @@ function Index() {
                 </div>
             </div>
             {/* footer section end */}
+
+
             {/* copyright section start */}
             <div className="copyright_section">
                 <div className="container">
@@ -991,6 +1018,8 @@ function Index() {
                 </div>
             </div>
             {/* copyright section end */}
+
+
             {/* Javascript files*/}
             {/* sidebar */}
             {/* javascript */}
