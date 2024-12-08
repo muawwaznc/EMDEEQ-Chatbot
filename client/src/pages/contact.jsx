@@ -1,5 +1,4 @@
 import React from "react";
-import "./App.css"; // Import your CSS files here
 import { Link } from "react-router-dom";
 
 const HeaderTop = () => (
@@ -9,7 +8,7 @@ const HeaderTop = () => (
                 <div className="col-sm-12">
                     <div className="header_top_main">
                         <div className="call_text">
-                        <Link to="/call">
+                        <Link to="/call" className="padding_right0">
                             <span className="padding_right0">
                                 <i className="fa fa-phone" aria-hidden="true"></i>
                             </span>

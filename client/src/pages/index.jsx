@@ -6,6 +6,9 @@ import AboutImage from '../misc/images/about-img.png'
 import crousalImage1 from '../misc/images/img-1.png';
 import crousalImage2 from '../misc/images/img-2.png';
 import crousalImage3 from '../misc/images/img-3.png';
+import crousalImage4 from '../misc/images/img-4.png';
+import crousalImage5 from '../misc/images/img-5.png';
+import quickIcon from '../misc/images/quick-icon.png';
 
 function Index() {
     return (
@@ -688,22 +691,22 @@ function Index() {
                                     </div>
                                 </div>
                             </div>
-                            <a
+                            <button
                                 className="carousel-control-prev"
-                                to="#my_slider"
-                                role="button"
-                                data-slide="prev"
+                                type="button"
+                                data-bs-target="#doctors_slider"
+                                data-bs-slide="prev"
                             >
                                 <i className="fa fa-angle-left" />
-                            </a>
-                            <a
+                            </button>
+                            <button
                                 className="carousel-control-next"
-                                to="#my_slider"
-                                role="button"
-                                data-slide="next"
+                                type="button"
+                                data-bs-target="#doctors_slider"
+                                data-bs-slide="next"
                             >
                                 <i className="fa fa-angle-right" />
-                            </a>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -735,7 +738,7 @@ function Index() {
                                                         <h3 className="customer_name">
                                                             Morijorch{" "}
                                                             <span className="quick_icon">
-                                                                <img src="images/quick-icon.png" />
+                                                                <img src={quickIcon} alt="quickIcon" />
                                                             </span>
                                                         </h3>
                                                         <p className="default_text">Default model text,</p>
@@ -759,7 +762,7 @@ function Index() {
                                                         <h3 className="customer_name">
                                                             Morijorch{" "}
                                                             <span className="quick_icon">
-                                                                <img src="images/quick-icon.png" />
+                                                                <img src={quickIcon} alt="quickIcon" />
                                                             </span>
                                                         </h3>
                                                         <p className="default_text">Default model text,</p>
@@ -783,7 +786,7 @@ function Index() {
                                                         <h3 className="customer_name">
                                                             Morijorch{" "}
                                                             <span className="quick_icon">
-                                                                <img src="images/quick-icon.png" />
+                                                                <img src={quickIcon} alt="quickIcon" />
                                                             </span>
                                                         </h3>
                                                         <p className="default_text">Default model text,</p>
@@ -872,14 +875,14 @@ function Index() {
                             <div className="col-md-6 padding_left_15">
                                 <div className="map_main">
                                     <div className="map-responsive">
-                                        <iframe
-                                            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&q=Eiffel+Tower+Paris+France"
-                                            width={600}
-                                            height={600}
-                                            frameBorder={0}
-                                            style={{ border: 0, width: "100%" }}
-                                            allowFullScreen=""
-                                        />
+                                    <iframe
+                                        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&q=Eiffel+Tower+Paris+France"
+                                        width={600}
+                                        height={600}
+                                        style={{ border: 0, width: "100%" }}
+                                        allowFullScreen=""
+                                        title="Map showing Eiffel Tower, Paris, France"
+                                    />
                                     </div>
                                 </div>
                             </div>
@@ -992,11 +995,11 @@ function Index() {
                             <div className="col-lg-3 col-sm-6">
                                 <h3 className="footer_taital">News</h3>
                                 <div className="dryfood_text">
-                                    <img src="images/img-4.png" />
+                                    <img src={crousalImage4} alt='crousalImage4' />
                                     <span className="padding_15">Normal distribution</span>
                                 </div>
                                 <div className="dryfood_text">
-                                    <img src="images/img-5.png" />
+                                    <img src={crousalImage5} alt='crousalImage5' />
                                     <span className="padding_15">Normal distribution</span>
                                 </div>
                             </div>
