@@ -16,20 +16,20 @@ const HeaderTop = () => (
                         </Link>
                         </div>
                         <div className="call_text_2">
-                            <a href="#">
+                            <Link to="#">
                                 <span className="padding_right0">
                                     <i className="fa fa-envelope" aria-hidden="true"></i>
                                 </span>
                                 demo@gmail.com
-                            </a>
+                            </Link>
                         </div>
                         <div className="call_text_1">
-                            <a href="#">
+                            <Link to="#">
                                 <span className="padding_right0">
                                     <i className="fa fa-map-marker" aria-hidden="true"></i>
                                 </span>
                                 Location
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -42,9 +42,9 @@ const Header = () => (
     <div className="header_section">
         <div className="container">
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                <a className="navbar-brand" href="index.html">
+                <Link className="navbar-brand" to="index.html">
                     <img src="images/logo.png" alt="Logo" />
-                </a>
+                </Link>
                 <button
                     className="navbar-toggler"
                     type="button"
@@ -59,34 +59,34 @@ const Header = () => (
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav ml-auto">
                         <li className="nav-item active">
-                            <a className="nav-link" href="index.html">
+                            <Link className="nav-link" to="index.html">
                                 Home
-                            </a>
+                            </Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="about.html">
+                            <Link className="nav-link" to="about.html">
                                 About
-                            </a>
+                            </Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="treatment.html">
+                            <Link className="nav-link" to="treatment.html">
                                 Treatment
-                            </a>
+                            </Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="doctors.html">
+                            <Link className="nav-link" to="doctors.html">
                                 Doctors
-                            </a>
+                            </Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="blog.html">
+                            <Link className="nav-link" to="blog.html">
                                 Blog
-                            </a>
+                            </Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="contact.html">
+                            <Link className="nav-link" to="contact.html">
                                 Contact Us
-                            </a>
+                            </Link>
                         </li>
                     </ul>
                 </div>
@@ -130,7 +130,7 @@ const Contact = () => (
                                     name="Message"
                                 ></textarea>
                                 <div className="send_bt">
-                                    <a href="#">SEND</a>
+                                    <Link to="#">SEND</Link>
                                 </div>
                             </div>
                         </form>
@@ -142,7 +142,7 @@ const Contact = () => (
                                     src="https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q=Eiffel+Tower+Paris+France"
                                     width="600"
                                     height="600"
-                                    frameBorder="0"
+                                    title="Map showing Eiffel Tower, Paris, France"
                                     style={{ border: 0, width: "100%" }}
                                     allowFullScreen
                                 ></iframe>
@@ -166,7 +166,7 @@ const Footer = () => (
                     name="Enter your email"
                 />
                 <span className="subscribe_bt" id="basic-addon2">
-                    <a href="#">Subscribe</a>
+                    <Link to="#">Subscribe</Link>
                 </span>
             </div>
         </div>

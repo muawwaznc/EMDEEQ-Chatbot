@@ -3,15 +3,13 @@ import { Link } from 'react-router-dom';
 
 // Images and Logo
 import Logo from '../misc/images/logo.png'
-import AboutImage from '../misc/images/about-img.png'
 import crousalImage1 from '../misc/images/img-1.png';
 import crousalImage2 from '../misc/images/img-2.png';
 import crousalImage3 from '../misc/images/img-3.png';
 import crousalImage4 from '../misc/images/img-4.png';
 import crousalImage5 from '../misc/images/img-5.png';
-import quickIcon from '../misc/images/quick-icon.png';
 
-function Index() {
+function Doctors() {
     return (
         <>
             {/* header top section start */}
@@ -50,14 +48,12 @@ function Index() {
                 </div>
             </div>
             {/* header top section end */}
-
-
             {/* header section start */}
             <div className="header_section">
                 <div className="container">
                     <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                        <Link className="navbar-brand" to="#">
-                            <img src={Logo} alt="Logo" />
+                        <Link className="navbar-brand" to="/">
+                            <img src={Logo} alt='Logo' />
                         </Link>
                         <button
                             className="navbar-toggler"
@@ -110,22 +106,22 @@ function Index() {
                         <div className="custom_menu">
                             <ul>
                                 <li className="active">
-                                    <Link to="/">Home</Link>
+                                    <Link to="">Home</Link>
                                 </li>
                                 <li>
-                                    <Link to="/about">About</Link>
+                                    <Link to="about">About</Link>
                                 </li>
                                 <li>
-                                    <Link to="/treatment">Treatment</Link>
+                                    <Link to="treatment">Treatment</Link>
                                 </li>
                                 <li>
-                                    <Link to="/doctors">Doctors</Link>
+                                    <Link to="doctors">Doctors</Link>
                                 </li>
                                 <li>
-                                    <Link to="/blog">Blog</Link>
+                                    <Link to="blog">Blog</Link>
                                 </li>
                                 <li>
-                                    <Link to="/contact">Contact Us</Link>
+                                    <Link to="contact">Contact Us</Link>
                                 </li>
                             </ul>
                         </div>
@@ -152,209 +148,10 @@ function Index() {
                         </form>
                     </div>
                 </div>
-                {/* header section end */}
-
-                {/* banner section start */}
-                <div className="banner_section layout_padding">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-md-12">
-                                <h1 className="banner_taital">We care Of You</h1>
-                                <p className="banner_text">
-                                    When looking at its layout. The point of using Lorem Ipsum is that
-                                    it has a more-or-less normal distribution of letters, as opposed
-                                    to{" "}
-                                </p>
-                                <div className="read_bt">
-                                    <Link to="#">Read More</Link>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                {/* banner section end */}
             </div>
             {/* header section end */}
-
-
-            {/* appointment section start */}
-            <div className="appointment_section">
-                <div className="container">
-                    <div className="appointment_box">
-                        <div className="row">
-                            <div className="col-md-12">
-                                <h1 className="appointment_taital">
-                                    Book <span style={{ color: "#0cb7d6" }}>Appointment</span>
-                                </h1>
-                            </div>
-                        </div>
-                        <div className="appointment_section_2">
-                            <div className="row">
-                                <div className="col-md-4">
-                                    <p className="doctorname_text">Patient Name</p>
-                                    <input
-                                        type="text"
-                                        className="email_text"
-                                        placeholder=""
-                                        name=""
-                                    />
-                                </div>
-                                <div className="col-md-4">
-                                    <form>
-                                        <div className="form-group">
-                                            <p className="doctorname_text">Doctor's Name</p>
-                                            <select className="form-control" id="">
-                                                <option>Normal distribution </option>
-                                                <option>200</option>
-                                                <option>300</option>
-                                                <option>400</option>
-                                                <option>500</option>
-                                            </select>
-                                        </div>
-                                    </form>
-                                </div>
-                                <div className="col-md-4">
-                                    <form>
-                                        <div className="form-group">
-                                            <p className="doctorname_text">Department's Name</p>
-                                            <select className="form-control" id="">
-                                                <option>Normal distribution </option>
-                                                <option>2</option>
-                                                <option>3</option>
-                                                <option>4</option>
-                                                <option>5</option>
-                                            </select>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                            <div className="row">
-                                <div className="col-md-4">
-                                    <p className="doctorname_text">Phone Number</p>
-                                    <input
-                                        type="text"
-                                        className="email_text"
-                                        placeholder=""
-                                        name=""
-                                    />
-                                </div>
-                                <div className="col-md-4">
-                                    <form>
-                                        <div className="form-group">
-                                            <p className="doctorname_text">Department</p>
-                                            <select className="form-control" id="">
-                                                <option>Normal distribution</option>
-                                                <option>2</option>
-                                                <option>3</option>
-                                                <option>4</option>
-                                                <option>5</option>
-                                            </select>
-                                        </div>
-                                    </form>
-                                </div>
-                                <div className="col-md-4">
-                                    <p className="doctorname_text">Choose Date</p>
-                                    <input id="datepicker" placeholder="Select Date" width={270} />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {/* appointment section end */}
-
-
-            {/* about section start */}
-            <div className="about_section layout_padding">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-md-6">
-                            <h1 className="about_taital">About Hospital</h1>
-                            <p className="about_text">
-                                {" "}
-                                has a more-or-less normal distribution of letters, as opposed to
-                                using 'Content here, content here', making it look like readable
-                                English. Many desktop publishing packages and web page editors has a
-                                more-or-less normal distribution of letters, as o
-                            </p>
-                            <div className="about_bt">
-                                <Link to="#">Read More</Link>
-                            </div>
-                        </div>
-                        <div className="col-md-6">
-                            <div className="about_img">
-                                <img src={AboutImage} alt='AboutImage' />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {/* about section end */}
-
-
-            {/* treatment section start */}
-            <div className="treatment_section layout_padding">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-md-12">
-                            <h1 className="treatment_taital">Hospital Treatment</h1>
-                        </div>
-                    </div>
-                    <div className="treatment_section_2">
-                        <div className="row">
-                            <div className="col-lg-3 col-sm-6">
-                                <h1 className="number_text">01</h1>
-                                <h2 className="care_text">Nephrologist Care</h2>
-                                <p className="treatment_text">
-                                    alteration in some form, by injected humour, or randomised words
-                                    which don't look even slightly e sure there isn't anything
-                                </p>
-                                <div className="readmore_bt active">
-                                    <Link to="#">Read More</Link>
-                                </div>
-                            </div>
-                            <div className="col-lg-3 col-sm-6">
-                                <h1 className="number_text">02</h1>
-                                <h2 className="care_text">Eye Care</h2>
-                                <p className="treatment_text_1">
-                                    alteration in some form, by injected humour, or randomised words
-                                    which don't look even{" "}
-                                </p>
-                                <div className="readmore_bt">
-                                    <Link to="#">Read More</Link>
-                                </div>
-                            </div>
-                            <div className="col-lg-3 col-sm-6">
-                                <h1 className="number_text">03</h1>
-                                <h2 className="care_text">Pediatrician Clinic</h2>
-                                <p className="treatment_text_1">
-                                    alteration in some form, by injected humour, or randomised words
-                                    which don't look even
-                                </p>
-                                <div className="readmore_bt">
-                                    <Link to="#">Read More</Link>
-                                </div>
-                            </div>
-                            <div className="col-lg-3 col-sm-6">
-                                <h1 className="number_text">04</h1>
-                                <h2 className="care_text">Prenatal Care</h2>
-                                <p className="treatment_text_1">
-                                    alteration in some form, by injected humour, or randomised words
-                                    which don't look even
-                                </p>
-                                <div className="readmore_bt">
-                                    <Link to="#">Read More</Link>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {/* treatment section end */}
-
-
             {/* doctores section start */}
-            <div className="doctores_section">
+            <div className="doctores_section margim_90">
                 <div className="container">
                     <div className="row">
                         <div className="col-md-12">
@@ -369,7 +166,7 @@ function Index() {
                                         <div className="col-md-4">
                                             <div className="doctores_box">
                                                 <div className="image_1">
-                                                    <img src={crousalImage1} alt="crousalImage1" />
+                                                    <img src={crousalImage1} alt='crousalImage1' />
                                                 </div>
                                                 <h4 className="humour_text">
                                                     Humour <br />
@@ -404,7 +201,7 @@ function Index() {
                                         <div className="col-md-4">
                                             <div className="doctores_box">
                                                 <div className="image_1">
-                                                    <img src={crousalImage2} alt="crousalImage2" />
+                                                    <img src={crousalImage2} alt='crousalImage2' />
                                                 </div>
                                                 <h4 className="humour_text">
                                                     Jenni <br />
@@ -439,7 +236,7 @@ function Index() {
                                         <div className="col-md-4">
                                             <div className="doctores_box">
                                                 <div className="image_1">
-                                                    <img src={crousalImage3} alt="crousalImage3" />
+                                                    <img src={crousalImage3} alt='crousalImage3' />
                                                 </div>
                                                 <h4 className="humour_text">
                                                     Morco <br />
@@ -478,7 +275,7 @@ function Index() {
                                         <div className="col-md-4">
                                             <div className="doctores_box">
                                                 <div className="image_1">
-                                                    <img src={crousalImage1} alt="crousalImage1" />
+                                                    <img src={crousalImage1} alt='crousalImage1' />
                                                 </div>
                                                 <h4 className="humour_text">
                                                     Humour <br />
@@ -513,7 +310,7 @@ function Index() {
                                         <div className="col-md-4">
                                             <div className="doctores_box">
                                                 <div className="image_1">
-                                                    <img src={crousalImage2} alt="crousalImage2" />
+                                                    <img src={crousalImage2} alt='crousalImage2' />
                                                 </div>
                                                 <h4 className="humour_text">
                                                     Jenni <br />
@@ -548,7 +345,7 @@ function Index() {
                                         <div className="col-md-4">
                                             <div className="doctores_box">
                                                 <div className="image_1">
-                                                    <img src={crousalImage3} alt="crousalImage3" />
+                                                    <img src={crousalImage3} alt='crousalImage3' />
                                                 </div>
                                                 <h4 className="humour_text">
                                                     Morco <br />
@@ -587,7 +384,7 @@ function Index() {
                                         <div className="col-md-4">
                                             <div className="doctores_box">
                                                 <div className="image_1">
-                                                    <img src={crousalImage1} alt="crousalImage1" />
+                                                    <img src={crousalImage1} alt='crousalImage1' />
                                                 </div>
                                                 <h4 className="humour_text">
                                                     Humour <br />
@@ -622,7 +419,7 @@ function Index() {
                                         <div className="col-md-4">
                                             <div className="doctores_box">
                                                 <div className="image_1">
-                                                    <img src={crousalImage2} alt="crousalImage2" />
+                                                    <img src={crousalImage2} alt='crousalImage2' />
                                                 </div>
                                                 <h4 className="humour_text">
                                                     Jenni <br />
@@ -657,7 +454,7 @@ function Index() {
                                         <div className="col-md-4">
                                             <div className="doctores_box">
                                                 <div className="image_1">
-                                                    <img src={crousalImage3} alt="crousalImage3" />
+                                                    <img src={crousalImage3} alt='crousalImage3' />
                                                 </div>
                                                 <h4 className="humour_text">
                                                     Morco <br />
@@ -692,208 +489,27 @@ function Index() {
                                     </div>
                                 </div>
                             </div>
-                            <button
+                            <Link
                                 className="carousel-control-prev"
-                                type="button"
-                                data-bs-target="#doctors_slider"
-                                data-bs-slide="prev"
+                                to="#my_slider"
+                                role="button"
+                                data-slide="prev"
                             >
                                 <i className="fa fa-angle-left" />
-                            </button>
-                            <button
+                            </Link>
+                            <Link
                                 className="carousel-control-next"
-                                type="button"
-                                data-bs-target="#doctors_slider"
-                                data-bs-slide="next"
+                                to="#my_slider"
+                                role="button"
+                                data-slide="next"
                             >
                                 <i className="fa fa-angle-right" />
-                            </button>
+                            </Link>
                         </div>
                     </div>
                 </div>
             </div>
             {/* doctores section end */}
-
-
-            {/* testimonial section start */}
-            <div className="testimonial_section layout_padding">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-md-12">
-                            <h1 className="testimonial_taital">Our Testimonial</h1>
-                        </div>
-                    </div>
-                    <div className="customer_section_2">
-                        <div className="row">
-                            <div className="col-md-12">
-                                <div className="box_main">
-                                    <div
-                                        id="main_slider"
-                                        className="carousel slide"
-                                        data-ride="carousel"
-                                    >
-                                        <div className="carousel-inner">
-                                            <div className="carousel-item active">
-                                                <div className="customer_main">
-                                                    <div className="customer_right">
-                                                        <h3 className="customer_name">
-                                                            Morijorch{" "}
-                                                            <span className="quick_icon">
-                                                                <img src={quickIcon} alt="quickIcon" />
-                                                            </span>
-                                                        </h3>
-                                                        <p className="default_text">Default model text,</p>
-                                                        <p className="enim_text">
-                                                            editors now use Lorem Ipsum as their default model
-                                                            text, and a search for 'lorem ipsum' will uncover many
-                                                            web sites still in their infancy. Variouseditors now
-                                                            use Lorem Ipsum as their default model text, and a
-                                                            search for 'lorem ipsum' will uncover many web sites
-                                                            still in their infancy. Variouseditors now use Lorem
-                                                            Ipsum as their default model text, and a search for
-                                                            'lorem ipsum' will uncover many web sites still in
-                                                            their infancy. Various
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="carousel-item">
-                                                <div className="customer_main">
-                                                    <div className="customer_right">
-                                                        <h3 className="customer_name">
-                                                            Morijorch{" "}
-                                                            <span className="quick_icon">
-                                                                <img src={quickIcon} alt="quickIcon" />
-                                                            </span>
-                                                        </h3>
-                                                        <p className="default_text">Default model text,</p>
-                                                        <p className="enim_text">
-                                                            editors now use Lorem Ipsum as their default model
-                                                            text, and a search for 'lorem ipsum' will uncover many
-                                                            web sites still in their infancy. Variouseditors now
-                                                            use Lorem Ipsum as their default model text, and a
-                                                            search for 'lorem ipsum' will uncover many web sites
-                                                            still in their infancy. Variouseditors now use Lorem
-                                                            Ipsum as their default model text, and a search for
-                                                            'lorem ipsum' will uncover many web sites still in
-                                                            their infancy. Various
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="carousel-item">
-                                                <div className="customer_main">
-                                                    <div className="customer_right">
-                                                        <h3 className="customer_name">
-                                                            Morijorch{" "}
-                                                            <span className="quick_icon">
-                                                                <img src={quickIcon} alt="quickIcon" />
-                                                            </span>
-                                                        </h3>
-                                                        <p className="default_text">Default model text,</p>
-                                                        <p className="enim_text">
-                                                            editors now use Lorem Ipsum as their default model
-                                                            text, and a search for 'lorem ipsum' will uncover many
-                                                            web sites still in their infancy. Variouseditors now
-                                                            use Lorem Ipsum as their default model text, and a
-                                                            search for 'lorem ipsum' will uncover many web sites
-                                                            still in their infancy. Variouseditors now use Lorem
-                                                            Ipsum as their default model text, and a search for
-                                                            'lorem ipsum' will uncover many web sites still in
-                                                            their infancy. Various
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <a
-                                            className="carousel-control-prev"
-                                            href="#main_slider"
-                                            role="button"
-                                            data-slide="prev"
-                                        >
-                                            <i className="fa fa-angle-left" />
-                                        </a>
-                                        <a
-                                            className="carousel-control-next"
-                                            href="#main_slider"
-                                            role="button"
-                                            data-slide="next"
-                                        >
-                                            <i className="fa fa-angle-right" />
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {/* testimonial section end */}
-
-
-            {/* contact section start */}
-            <div className="contact_section layout_padding">
-                <div className="container-fluid">
-                    <div className="contact_section_2">
-                        <div className="row">
-                            <div className="col-md-6">
-                                <h1 className="contact_taital">Get In Touch</h1>
-                                <form action="">
-                                    <div className="mail_section_1">
-                                        <input
-                                            type="text"
-                                            className="mail_text"
-                                            placeholder="Name"
-                                            name="Name"
-                                        />
-                                        <input
-                                            type="text"
-                                            className="mail_text"
-                                            placeholder="Phone Number"
-                                            name="Phone Number"
-                                        />
-                                        <input
-                                            type="text"
-                                            className="mail_text"
-                                            placeholder="Email"
-                                            name="Email"
-                                        />
-                                        <textarea
-                                            className="massage-bt"
-                                            placeholder="Massage"
-                                            rows={5}
-                                            id="comment"
-                                            name="Massage"
-                                            defaultValue={""}
-                                        />
-                                        <div className="send_bt">
-                                            <Link to="#">SEND</Link>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                            <div className="col-md-6 padding_left_15">
-                                <div className="map_main">
-                                    <div className="map-responsive">
-                                    <iframe
-                                        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&q=Eiffel+Tower+Paris+France"
-                                        width={600}
-                                        height={600}
-                                        style={{ border: 0, width: "100%" }}
-                                        allowFullScreen=""
-                                        title="Map showing Eiffel Tower, Paris, France"
-                                    />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {/* contact section end */}
-
-
             {/* footer section start */}
             <div className="footer_section">
                 <div className="container">
@@ -965,23 +581,23 @@ function Index() {
                                 <h3 className="footer_taital">Useful Link</h3>
                                 <div className="footer_menu">
                                     <ul>
+                                        <li>
+                                            <Link to="">Home</Link>
+                                        </li>
+                                        <li>
+                                            <Link to="about">About</Link>
+                                        </li>
                                         <li className="active">
-                                            <Link to="/">Home</Link>
+                                            <Link to="doctors">Doctors</Link>
                                         </li>
                                         <li>
-                                            <Link to="/about">About</Link>
+                                            <Link to="news">News</Link>
                                         </li>
                                         <li>
-                                            <Link to="/doctors">Doctors</Link>
+                                            <Link to="treatment">Treatment</Link>
                                         </li>
                                         <li>
-                                            <Link to="/news">News</Link>
-                                        </li>
-                                        <li>
-                                            <Link to="/treatment">Treatment</Link>
-                                        </li>
-                                        <li>
-                                            <Link to="/contact">Contact Us</Link>
+                                            <Link to="contact">Contact Us</Link>
                                         </li>
                                     </ul>
                                 </div>
@@ -1009,8 +625,6 @@ function Index() {
                 </div>
             </div>
             {/* footer section end */}
-
-
             {/* copyright section start */}
             <div className="copyright_section">
                 <div className="container">
@@ -1027,4 +641,4 @@ function Index() {
     );
 }
 
-export default Index;
+export default Doctors;
