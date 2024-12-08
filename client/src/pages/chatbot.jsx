@@ -1,5 +1,5 @@
 
-//import '../misc/css/chatbot.css'
+import '../misc/css/chatbot.css'
 function Chatbot() {
     return (
         <>
