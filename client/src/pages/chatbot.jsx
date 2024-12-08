@@ -2,7 +2,7 @@
 import '../misc/css/chatbot.css'
 function Chatbot() {
     return (
-        <>
+        <div className="chatbot-body">
             <div className="container">
                 <div className="row clearfix">
                     <div className="col-lg-12">
@@ -174,7 +174,7 @@ function Chatbot() {
                     </div>
                 </div>
             </div>
-        </>
+        </div>
 
     );
 }

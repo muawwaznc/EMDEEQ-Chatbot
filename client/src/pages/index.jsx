@@ -2,13 +2,13 @@ import React from "react";
 import { Link } from 'react-router-dom';
 
 // Images and Logo
-import Logo from '../misc/img/icon/logo.png';
-import SliderImage2 from '../misc/img/slider/2.png';
-import ServiceIcon1 from '../misc/img/icon/service-icon-1.png';
-import ServiceIcon2 from '../misc/img/icon/service-icon-2.png';
-import ServiceIcon3 from '../misc/img/icon/service-icon-3.png';
-import AboutLogo from '../misc/img/other/about.png';
-import CalltoactionLogo from '../misc/img/other/calltoaction.png';
+import Logo from '../img/logo.png';
+import SliderImage2 from '../img/2.png';
+import ServiceIcon1 from '../img/service-icon-1.png';
+import ServiceIcon2 from '../img/service-icon-2.png';
+import ServiceIcon3 from '../img/service-icon-3.png';
+import AboutLogo from '../img/about.png';
+import CalltoactionLogo from '../img/calltoaction.png';
 
 
 function Index() {
@@ -48,7 +48,7 @@ function Index() {
                                     </Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link download-btn" to="#">
+                                    <Link className="nav-link download-btn" to="/chatbot">
                                         Access EMDEEQ
                                     </Link>
                                 </li>
@@ -80,7 +80,7 @@ function Index() {
                                                         diagnoses, interpreting medical scans, and simplifying
                                                         the complexities of healthcare.
                                                     </p>
-                                                    <Link to="https://app.angelai.io" className="hero-btn">
+                                                    <Link to="/chatbot" className="hero-btn">
                                                         Access EMDEEQ Now
                                                     </Link>{" "}
                                                     &nbsp;
@@ -314,7 +314,7 @@ function Index() {
                                     If you're looking for an informed second opinion - Chat with
                                     EMDEEQ now!
                                 </p>
-                                <Link className="hero-btn" to="#">
+                                <Link className="hero-btn" to="/chatbot">
                                     Access EMDEEQ Now
                                 </Link>
                                 <p />
