@@ -100,17 +100,9 @@ document.addEventListener('contextmenu', function (event) {
 async function LoadChats() {
     try {
         const chatList = document.getElementById('chatList');
-        // const response = await axios.get(serverUrl + '/');
         const response = await axios.get(serverUrl + '/get-chats-of-user/' + localStorage.getItem('userId'));
 
         const chats = response.data;
-        // const chatId = localStorage.getItem('chatId');
-        // console.log(chats, chatId);
-
-        // // Filter chats by chatId
-        // const filteredChats = chats.filter(chat => chat._id === chatId);
-
-        // console.log(filteredChats);
 
 
         chatList.innerHTML = '';
@@ -447,20 +439,20 @@ function applyResponsiveStylesForBuiltInQuestions() {
                 <div class="col-6">
                     <div class="btn card-btn text-center card border-secondary mb-3" onclick="SetBuiltInQuestion(1)">
                         <div class="image-container">
-                            <img class="card-img" src="./images/Question1.png" alt="Question 1" srcset="">
+                            <img class="card-img" src="./img/clickIcons/diagnosis.png" alt="Question 1" srcset="">
                         </div>
                         <div id="foodText" class="card-footer text-muted">
-                            Food
+                            Diagnostic Analysis
                         </div>
                     </div>
                 </div>
                 <div class="col-6">
                     <div class="btn card-btn text-center card border-secondary mb-3" onclick="SetBuiltInQuestion(2)">
                         <div class="image-container">
-                            <img class="card-img" src="./images/Question2.png" alt="Question 2" srcset="">
+                            <img class="card-img" src="./img/clickIcons/symptoms.png" alt="Question 2" srcset="">
                         </div>
                         <div id="housingText" class="card-footer text-muted">
-                            Housing
+                            Symptom Review
                         </div>
                     </div>
                 </div>  
@@ -469,20 +461,20 @@ function applyResponsiveStylesForBuiltInQuestions() {
                 <div class="col-6">
                     <div class="btn card-btn text-center card border-secondary mb-3" onclick="SetBuiltInQuestion(3)">
                         <div class="image-container">
-                            <img class="card-img" src="./images/Question3.png" alt="Question 3" srcset="">
+                            <img class="card-img" src="./img/clickIcons/care.png" alt="Question 3" srcset="">
                         </div>
                         <div id="transportationText" class="card-footer text-muted">
-                            Transportation
+                            Care Insights
                         </div>
                     </div>
                 </div>
                 <div class="col-6">
                     <div class="btn card-btn text-center card border-secondary mb-3" onclick="SetBuiltInQuestion(4)">
                         <div class="image-container">
-                            <img class="card-img" src="./images/Question4.png" alt="Question 4" srcset="">
+                            <img class="card-img" src="./img/clickIcons/upload.png" alt="Question 4" srcset="">
                         </div>
                         <div id="caregivingText" class="card-footer text-muted">
-                            Caregiving
+                            Imaging Upload
                         </div>
                     </div>
                 </div>
@@ -491,20 +483,20 @@ function applyResponsiveStylesForBuiltInQuestions() {
                 <div class="col-6">
                     <div class="btn card-btn text-center card border-secondary mb-3" onclick="SetBuiltInQuestion(5)">
                         <div class="image-container">
-                            <img class="card-img" src="./images/Question5.png" alt="Question 5" srcset="">
+                            <img class="card-img" src="../img/clickIcons/billing.png" alt="Question 5" srcset="">
                         </div>
                         <div id="behavioralHealthText" class="card-footer text-muted">
-                            Behavioral Health
+                            Billing Guidance
                         </div>
                     </div>
                 </div>
                 <div class="col-6">
                     <div class="btn card-btn text-center card border-secondary mb-3" onclick="SetBuiltInQuestion(6)">
                         <div class="image-container">
-                            <img class="card-img" src="./images/Question6.png" alt="Question 6" srcset="">
+                            <img class="card-img" src="./img/clickIcons/chat.png" alt="Question 6" srcset="">
                         </div>
                         <div id="hopeText" class="card-footer text-muted">
-                            Chat
+                            Open Chat
                         </div>
                     </div>
                 </div>
