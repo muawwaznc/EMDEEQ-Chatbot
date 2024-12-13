@@ -369,9 +369,9 @@ function applyResponsiveStylesForBuiltInQuestions() {
                 <div class="col-6">
                     <div class="btn card-btn text-center card border-secondary mb-3" onclick="SetBuiltInQuestion(1)">
                         <div class="image-container">
-                            <img class="card-img" src="./img/clickIcons/diagnosis.png" alt="Question 1" srcset="">
+                            <img class="card-img" src="./img/clickIcons/diagnosis.png" alt="Diagnostic Analysis" srcset="">
                         </div>
-                        <div id="foodText" class="card-footer m-0 p-0 text-muted">
+                        <div id="diagnosticAnalysisText" class="card-footer m-0 p-0 text-muted">
                             Diagnostic Analysis
                         </div>
                     </div>
@@ -379,9 +379,9 @@ function applyResponsiveStylesForBuiltInQuestions() {
                 <div class="col-6">
                     <div class="btn card-btn text-center card border-secondary mb-3" onclick="SetBuiltInQuestion(2)">
                         <div class="image-container">
-                            <img class="card-img" src="./img/clickIcons/symptoms.png" alt="Question 2" srcset="">
+                            <img class="card-img" src="./img/clickIcons/symptoms.png" alt="Symptom Review" srcset="">
                         </div>
-                        <div id="housingText" class="card-footer m-0 p-0 text-muted">
+                        <div id="symptomReviewText" class="card-footer m-0 p-0 text-muted">
                             Symptom Review
                         </div>
                     </div>
@@ -391,9 +391,9 @@ function applyResponsiveStylesForBuiltInQuestions() {
                 <div class="col-6">
                     <div class="btn card-btn text-center card border-secondary mb-3" onclick="SetBuiltInQuestion(3)">
                         <div class="image-container">
-                            <img class="card-img" src="./img/clickIcons/care.png" alt="Question 3" srcset="">
+                            <img class="card-img" src="./img/clickIcons/care.png" alt="Care Insights" srcset="">
                         </div>
-                        <div id="transportationText" class="card-footer m-0 p-0  text-muted">
+                        <div id="careInsightsText" class="card-footer m-0 p-0  text-muted">
                             Care Insights
                         </div>
                     </div>
@@ -401,9 +401,9 @@ function applyResponsiveStylesForBuiltInQuestions() {
                 <div class="col-6">
                     <div class="btn card-btn text-center card border-secondary mb-3" onclick="SetBuiltInQuestion(4)">
                         <div class="image-container">
-                            <img class="card-img" src="./img/clickIcons/upload.png" alt="Question 4" srcset="">
+                            <img class="card-img" src="./img/clickIcons/upload.png" alt="Imaging Upload" srcset="">
                         </div>
-                        <div id="caregivingText" class="card-footer m-0 p-0 text-muted">
+                        <div id="imagingUploadText" class="card-footer m-0 p-0 text-muted">
                             Imaging Upload
                         </div>
                     </div>
@@ -413,9 +413,9 @@ function applyResponsiveStylesForBuiltInQuestions() {
                 <div class="col-6">
                     <div class="btn card-btn text-center card border-secondary mb-3" onclick="SetBuiltInQuestion(5)">
                         <div class="image-container">
-                            <img class="card-img" src="../img/clickIcons/billing.png" alt="Question 5" srcset="">
+                            <img class="card-img" src="../img/clickIcons/billing.png" alt="Billing Guidance" srcset="">
                         </div>
-                        <div id="behavioralHealthText" class="card-footer m-0 p-0 text-muted">
+                        <div id="billingGuidanceText" class="card-footer m-0 p-0 text-muted">
                             Billing Guidance
                         </div>
                     </div>
@@ -423,9 +423,9 @@ function applyResponsiveStylesForBuiltInQuestions() {
                 <div class="col-6">
                     <div class="btn card-btn text-center card border-secondary mb-3" onclick="SetBuiltInQuestion(6)">
                         <div class="image-container">
-                            <img class="card-img" src="./img/clickIcons/chat.png" alt="Question 6" srcset="">
+                            <img class="card-img" src="./img/clickIcons/chat.png" alt="Open Chat" srcset="">
                         </div>
-                        <div id="hopeText" class="card-footer m-0 p-0  text-muted">
+                        <div id="openChatText" class="card-footer m-0 p-0  text-muted">
                             Open Chat
                         </div>
                     </div>
@@ -441,7 +441,7 @@ function applyResponsiveStylesForBuiltInQuestions() {
                         <div class="image-container">
                             <img class="card-img" src="./img/clickIcons/diagnosis.png" alt="Question 1" srcset="">
                         </div>
-                        <div id="foodText" class="card-footer text-muted">
+                        <div id="diagnosticAnalysisText" class="card-footer text-muted">
                             Diagnostic Analysis
                         </div>
                     </div>
@@ -451,7 +451,7 @@ function applyResponsiveStylesForBuiltInQuestions() {
                         <div class="image-container">
                             <img class="card-img" src="./img/clickIcons/symptoms.png" alt="Question 2" srcset="">
                         </div>
-                        <div id="housingText" class="card-footer text-muted">
+                        <div id="symptomReviewText" class="card-footer text-muted">
                             Symptom Review
                         </div>
                     </div>
@@ -463,7 +463,7 @@ function applyResponsiveStylesForBuiltInQuestions() {
                         <div class="image-container">
                             <img class="card-img" src="./img/clickIcons/care.png" alt="Question 3" srcset="">
                         </div>
-                        <div id="transportationText" class="card-footer text-muted">
+                        <div id="careInsightsText" class="card-footer text-muted">
                             Care Insights
                         </div>
                     </div>
@@ -473,7 +473,7 @@ function applyResponsiveStylesForBuiltInQuestions() {
                         <div class="image-container">
                             <img class="card-img" src="./img/clickIcons/upload.png" alt="Question 4" srcset="">
                         </div>
-                        <div id="caregivingText" class="card-footer text-muted">
+                        <div id="imagingUploadText" class="card-footer text-muted">
                             Imaging Upload
                         </div>
                     </div>
@@ -485,7 +485,7 @@ function applyResponsiveStylesForBuiltInQuestions() {
                         <div class="image-container">
                             <img class="card-img" src="../img/clickIcons/billing.png" alt="Question 5" srcset="">
                         </div>
-                        <div id="behavioralHealthText" class="card-footer text-muted">
+                        <div id="billingGuidanceText" class="card-footer text-muted">
                             Billing Guidance
                         </div>
                     </div>
@@ -495,7 +495,7 @@ function applyResponsiveStylesForBuiltInQuestions() {
                         <div class="image-container">
                             <img class="card-img" src="./img/clickIcons/chat.png" alt="Question 6" srcset="">
                         </div>
-                        <div id="hopeText" class="card-footer text-muted">
+                        <div id="openChatText" class="card-footer text-muted">
                             Open Chat
                         </div>
                     </div>
