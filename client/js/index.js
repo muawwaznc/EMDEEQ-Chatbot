@@ -3,12 +3,12 @@ let selecedChatId;
 const serverUrl = 'https://coral-app-nflgp.ondigitalocean.app/api/chats';
 const newConversationUrl = 'https://b286-64-23-174-216.ngrok-free.app/api/conversation';
 const zipCode = "";
-let Question1 = "help me to find low income support for food in my zip code"
-let Question2 = "help me to find low income support for housing in my zip code"
-let Question3 = "help me to find low income support for transportation in my zip code"
-let Question4 = "help me to find low income caregiver support in my zip code"
-let Question5 = "help me to find behavioral health support for transportation in my zip code"
-let Question6 = "i want you to act as a peer counselor"
+let Question1 = "Could you guide me with relevant questions, one at a time, to prepare for my medical consultation? Additionally, please provide tips on effective communication with my healthcare provider."
+let Question2 = "Can we conduct a thorough review of my needs by addressing my symptoms one by one? Let's start with the main symptoms I'm experiencing, including their onset and frequency."
+let Question3 = "Can you help me critically evaluate my provider's plan of care? Please ask any relevant questions you need, one at a time."
+let Question4 = "Can you provide imaging insights and analysis to ensure nothing is overlooked in my care? I need to upload my images for review"
+let Question5 = "Can you provide insights to help me navigate medical bureaucracy and billing strategically, including guidance on contesting charges? Please ask me questions one by one to guide the process."
+let Question6 = "Could you help me discuss my medical issues while ensuring privacy, support, and dignity? Please ask if there are specific concerns or topics I should address, and guide me with questions one by one"
 
 let questionHasToSend = 0;
 
@@ -518,38 +518,38 @@ const translations = {
     en: {
         headerTitle: "Social Services with privacy, dignity and care",
         userInputPlaceholder: "Find the help you need here...",
-        angelText: "ANGeL",
+        angelText: "EMDEEQ",
         newChatText: "New Chat",
-        foodText: "Food",
-        housingText: "Housing",
-        transportationText: "Transportation",
-        caregivingText: "Caregiving",
-        behavioralHealthText: "Behavioral Health",
-        hopeText: "Chat",
-        Question1: "help me to find low income support for food in my zip code",
-        Question2: "help me to find low income support for housing in my zip code",
-        Question3: "help me to find low income support for transportation in my zip code",
-        Question4: "help me to find low income caregiver support in my zip code",
-        Question5: "help me to find behavioral health support for transportation in my zip code",
-        Question6: "i want you to act as a peer counselor"
+        DiagnosticAnalysisText: "Diagnostic Analysis",
+        SymptomReviewText: "Symptom Review",
+        CareInsightsText: "Care Insights",
+        ImagingUploadText: "Imaging Upload",
+        BillingGuidanceText: "Billing Guidance",
+        OpenChatText: "Open Chat",
+        Question1: "Could you guide me with relevant questions, one at a time, to prepare for my medical consultation? Additionally, please provide tips on effective communication with my healthcare provider.",
+        Question2: "Can we conduct a thorough review of my needs by addressing my symptoms one by one? Let's start with the main symptoms I'm experiencing, including their onset and frequency.",
+        Question3: "Can you help me critically evaluate my provider's plan of care? Please ask any relevant questions you need, one at a time.",
+        Question4: "Can you provide imaging insights and analysis to ensure nothing is overlooked in my care? I need to upload my images for review",
+        Question5: "Could you help me discuss my medical issues while ensuring privacy, support, and dignity? Please ask if there are specific concerns or topics I should address, and guide me with",
+        Question6: "Could you help me discuss my medical issues while ensuring privacy, support, and dignity? Please ask if there are specific concerns or topics I should address, and guide me with questions one by one"
     },
     es: {
         headerTitle: "Servicios sociales con privacidad, dignidad y cuidado",
         userInputPlaceholder: "Encuentra la ayuda que necesitas aquí...",
-        angelText: "ANGeL",
+        angelText: "EMDEEQ",
         newChatText: "Nuevo Chat",
-        foodText: "Alimentos",
-        housingText: "Vivienda",
-        transportationText: "Transporte",
-        caregivingText: "Cuidadores",
-        behavioralHealthText: "Salud Mental",
-        hopeText: "Chat",
-        Question1: "Ayúdame a encontrar apoyo de bajos ingresos para alimentos en mi código postal",
-        Question2: "Ayúdame a encontrar apoyo de bajos ingresos para vivienda en mi código postal",
-        Question3: "Ayúdame a encontrar apoyo de bajos ingresos para transporte en mi código postal",
-        Question4: "Ayúdame a encontrar apoyo de bajos ingresos para cuidadores en mi código postal",
-        Question5: "Ayúdame a encontrar apoyo de bajos ingresos para salud mental en mi código postal",
-        Question6: "Quiero que actúes como consejero entre pares"
+        DiagnosticAnalysisText: "",
+        SymptomReviewText: "",
+        CareInsightsText: "",
+        ImagingUploadText: "",
+        BillingGuidanceText: "",
+        OpenChatText: "",
+        Question1: "",
+        Question2: "",
+        Question3: "",
+        Question4: "",
+        Question5: "",
+        Question6: ""
     }
 };
 
@@ -566,13 +566,14 @@ function updateContent(language) {
     // document.getElementById('angelText').textContent = translations[language].angelText;
     document.getElementById('newChatText').textContent = translations[language].newChatText;
     document.getElementById('headerTitle').textContent = translations[language].headerTitle;
-    if (document.getElementById('foodText')) {
+    if (document.getElementById('DiagnosticAnalysisText')) {
 
-        document.getElementById('foodText').textContent = translations[language].foodText;
-        document.getElementById('housingText').textContent = translations[language].housingText;
-        document.getElementById('transportationText').textContent = translations[language].transportationText;
-        document.getElementById('caregivingText').textContent = translations[language].caregivingText;
-        document.getElementById('behavioralHealthText').textContent = translations[language].behavioralHealthText;
+        document.getElementById('DiagnosticAnalysisText').textContent = translations[language].DiagnosticAnalysisText;
+        document.getElementById('SymptomReviewText').textContent = translations[language].SymptomReviewText;
+        document.getElementById('CareInsightsText').textContent = translations[language].CareInsightsText;
+        document.getElementById('ImagingUploadText').textContent = translations[language].ImagingUploadText;
+        document.getElementById('BillingGuidanceText').textContent = translations[language].BillingGuidanceText;
+        document.getElementById('OpenChatText').textContent = translations[language].OpenChatText;
     }
 }
 
