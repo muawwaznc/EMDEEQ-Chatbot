@@ -1,7 +1,7 @@
 let newCreated = 0;
 let selecedChatId;
-const serverUrl = 'https://coral-app-nflgp.ondigitalocean.app/api/chats';
-const newConversationUrl = 'https://b286-64-23-174-216.ngrok-free.app/api/conversation';
+const serverUrl = '//https://coral-app-nflgp.ondigitalocean.app/api/chats';
+const newConversationUrl = '//https://b286-64-23-174-216.ngrok-free.app/api/conversation';
 const zipCode = "";
 let Question1 = "Could you guide me with relevant questions, one at a time, to prepare for my medical consultation? Additionally, please provide tips on effective communication with my healthcare provider."
 let Question2 = "Can we conduct a thorough review of my needs by addressing my symptoms one by one? Let's start with the main symptoms I'm experiencing, including their onset and frequency."
@@ -50,31 +50,33 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 document.onkeydown = function (e) {
-    if (event.keyCode == 123) {
-        return false;
-    }
-    if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
-        return false;
-    }
-    if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
-        return false;
-    }
-    if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
-        return false;
-    }
-    if (e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
-        return false;
-    }
-    // prevent from click on right click on mouse 
-    console.log(e);
-    if (e.button == 2) {
-        return false;
-    }
+    // if (event.keyCode == 123) {
+    //     return false;
+    // }
+    // if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+    //     return false;
+    // }
+    // if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+    //     return false;
+    // }
+    // if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+    //     return false;
+    // }
+    // if (e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
+    //     return false;
+    // }
+    // // prevent from click on right click on mouse 
+    // console.log(e);
+    // if (e.button == 2) {
+    //     return false;
+    // }
 }
+
 // Disable right-click
 document.addEventListener('contextmenu', function (event) {
-    event.preventDefault();
+    //event.preventDefault();
 });
+
 // if devtools is open then redirect to google
 // (function () {
 //     let devtoolsOpen = false;
@@ -399,7 +401,7 @@ function applyResponsiveStylesForBuiltInQuestions() {
                     </div>
                 </div>
                 <div class="col-6">
-                    <div class="btn card-btn text-center card border-secondary mb-3" onclick="SetBuiltInQuestion(4)">
+                    <div class="btn card-btn text-center card border-secondary mb-3" onclick="handleImageUpload()">
                         <div class="image-container">
                             <img class="card-img" src="./img/clickIcons/upload.png" alt="Imaging Upload" srcset="">
                         </div>
@@ -469,7 +471,7 @@ function applyResponsiveStylesForBuiltInQuestions() {
                     </div>
                 </div>
                 <div class="col-6">
-                    <div class="btn card-btn text-center card border-secondary mb-3" onclick="SetBuiltInQuestion(4)">
+                    <div class="btn card-btn text-center card border-secondary mb-3" onclick="handleImageUpload()">
                         <div class="image-container">
                             <img class="card-img" src="./img/clickIcons/upload.png" alt="Imaging Upload" srcset="">
                         </div>
@@ -513,6 +515,7 @@ function applyResponsiveStylesForBuiltInQuestions() {
 
     }
 }
+
 // Define translations for each language
 const translations = {
     en: {
@@ -553,7 +556,6 @@ const translations = {
     }
 };
 
-
 // Function to update the content based on the selected language
 function updateContent(language) {
     Question1 = translations[language].Question1;
@@ -586,7 +588,6 @@ function updateButtonLabel(language) {
         languageButton.textContent = 'English';
     }
 }
-
 
 function deleteAllCookies() {
     var cookies = document.cookie.split(";");
@@ -803,4 +804,60 @@ function formatResponse(response) {
     formattedResponse = formattedResponse.replace(/<br\s*\/?>\s*<br\s*\/?>/g, '<br>');
 
     return formattedResponse;
+}
+
+async function handleImageUpload() {
+    // Create an input element for file selection
+    const input = document.createElement('input');
+    input.type = 'file';
+    input.accept = 'image/*';
+    input.multiple = false;
+
+    // Trigger file selection dialog
+    input.click();
+
+    input.onchange = async (event) => {
+        const file = event.target.files[0];
+        if (!file) return;
+
+        // Read the image file
+        const reader = new FileReader();
+        reader.onload = async (e) => {
+            const image = e.target.result;
+
+            const { createWorker } = Tesseract;
+            const worker = createWorker();
+
+            try {
+                await worker.load();
+                await worker.loadLanguage('eng');
+                await worker.initialize('eng');
+                const { data: { text } } = await worker.recognize(image);
+
+                console.log('Extracted Text:', text);
+
+                // Use ChatGPT to correct the extracted text
+                const correctedText = await correctTextUsingChatGPT(text);
+
+                console.log('Corrected Text:', correctedText);
+
+                //SetBuiltInQuestion(correctedText);
+            } 
+            catch (error) {
+                console.error('Error processing image:', error);
+            } 
+            finally {
+                await worker.terminate();
+            }
+        };
+
+        reader.readAsDataURL(file);
+    };
+}
+
+async function correctTextUsingChatGPT(inputText) {
+    // Mocked ChatGPT integration
+    // Replace this with your actual ChatGPT API or integration
+    const correctedText = `Corrected: ${inputText.trim()}`;
+    return correctedText;
 }
