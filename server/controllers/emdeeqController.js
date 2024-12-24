@@ -54,3 +54,29 @@ exports.Signup = async (req, res) => {
         res.status(500).json({ message: 'Internal server error' });
     }
 };
+
+exports.AddDefaultCases = async (req, res) => { 
+    const { condition, response } = req.body;
+
+    try {
+        // Check if the condition already exists in the database
+        const existingCase = await EmdeeqDefaultCases.findOne({ condition });
+        if (existingCase) {
+            return res.status(409).json({ message: 'Condition already exists' }); 
+        }
+
+        // Create a new default case
+        const newCase = new EmdeeqDefaultCases({ condition, response });
+        await newCase.save();
+
+        // Return success response
+        res.status(201).json({
+            message: 'Default case added successfully',
+            caseId: newCase._id,
+        });
+    } catch (err) {
+        // Handle any server errors
+        console.error('Error while adding default case:', err);
+        res.status(500).json({ message: 'Internal server error' });
+    }
+};

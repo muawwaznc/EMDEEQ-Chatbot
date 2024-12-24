@@ -65,21 +65,21 @@
                     <div class="contact-wrap p-3">
                         <!-- Contact Form -->
                         <form id="contact-form" class="form contact-form">
-                            <h2>Login</h2><br>
+                            <h2>Default Cases</h2>
                             <div class="row">
                                 <div class="form-group col-12">
-                                    <input type="email" name="email" class="form-control" id="email" placeholder="Email"
-                                        required="required">
+                                    <input type="text" name="condition" class="form-control" id="condition" 
+                                        placeholder="Enter Condition" required="required">
                                 </div>
                                 <div class="form-group col-12 mt-4">
-                                    <input type="password" name="password" class="form-control" id="password"
-                                        placeholder="Password" required="required">
+                                    <textarea rows="5" name="response" class="form-control" id="response"
+                                        placeholder="Enter Response" required="required"></textarea>
                                 </div>
                                 <div class="col-12 mt-4">
                                     <div class="actions text-center">
                                         <p style="color: red;" id="login-status"></p>
                                         <button type="submit" name="submit" class="btn btn-lg btn-contact-bg">
-                                            Login
+                                            Add Case
                                         </button>
                                     </div>
                                 </div>
@@ -91,6 +91,7 @@
             </div>
         </div>
     </div>
+    
     <!-- Contact Area End -->
 
     <!-- Copyright Area Start -->
@@ -137,36 +138,44 @@
 
     <script>
         document.getElementById('contact-form').addEventListener('submit', async (e) => {
-            e.preventDefault();
+    e.preventDefault();
 
-            document.getElementById('login-status').innerText = ""
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
+    // Get form input values
+    const condition = document.getElementById('condition').value.trim();
+    const response = document.getElementById('response').value.trim();
+    var loginStatus = document.getElementById('login-status');
 
-            try {
-                const response = await fetch('http://localhost:3000/emdeeq/Login', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({ email, password }),
-                });
-
-                const data = await response.json();
-                if (response.ok) {
-                    // Store userId in localStorage
-                    localStorage.setItem('userId', data.userId);
-                    alert(`Login successful. User ID: ${data.userId}`);
-                }
-                else {
-                    document.getElementById('login-status').innerText = `Login failed: ${data.message}`;
-                }
-            }
-            catch (error) {
-                console.error('Error:', error);
-                document.getElementById('login-status').innerText = 'An error occurred. Please try again.';
-            }
+    try {
+        // Send data to the server
+        const res = await fetch('http://localhost:3000/emdeeq/AddDefaultCases', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ condition, response }),
         });
+
+        const data = await res.json();
+
+        if (res.ok) {
+            // If successful, show a success message
+            loginStatus.style.color = 'green';
+            loginStatus.innerText = 'Case added successfully';
+
+        } 
+        else {
+            // Show the error message
+            loginStatus.style.color = 'red';
+            loginStatus.innerText = `Error: ${data.message}`;
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        loginStatus.style.color = 'red';
+        loginStatus.innerText = 'An error occurred. Please try again.';
+    }
+});
+
+
     </script>
 
 
