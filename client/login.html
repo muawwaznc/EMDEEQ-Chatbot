@@ -83,10 +83,10 @@
                                 </div>
                                 <div class="col-12 mt-4">
                                     <div class="actions text-center">
+                                        <p style="color: red;" id="login-status"></p>
                                         <button type="submit" name="submit" class="btn btn-lg btn-contact-bg">
                                             Login
                                         </button>
-                                        <p class="form-messege"></p>
                                     </div>
                                 </div>
                             </div>
@@ -145,11 +145,12 @@
         document.getElementById('contact-form').addEventListener('submit', async (e) => {
             e.preventDefault();
 
+            document.getElementById('login-status').innerText = ""
             const email = document.getElementById('email').value;
             const password = document.getElementById('password').value;
 
             try {
-                const response = await fetch('http://localhost:3000/Login', {
+                const response = await fetch('http://localhost:3000/emdeeq/Login', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -159,16 +160,19 @@
 
                 const data = await response.json();
                 if (response.ok) {
-                    alert('Login successful: ' + data.message);
-                } else {
-                    alert('Login failed: ' + data.message);
+                    // Store userId in localStorage
+                    localStorage.setItem('userId', data.userId);
+                    alert(`Login successful. User ID: ${data.userId}`);
                 }
-            } catch (error) {
+                else {
+                    document.getElementById('login-status').innerText = `Login failed: ${data.message}`;
+                }
+            }
+            catch (error) {
                 console.error('Error:', error);
-                alert('An error occurred. Please try again.');
+                document.getElementById('login-status').innerText = 'An error occurred. Please try again.';
             }
         });
-
     </script>
 
 

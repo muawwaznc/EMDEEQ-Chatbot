@@ -8,6 +8,7 @@ require('dotenv').config();
 const chatRoutes = require('./routes/chatRoutes');
 const messageRoutes = require('./routes/messageRoutes');
 const emailSentRoutes = require('./routes/emailSentRoutes')
+const emdeeqRoutes = require('./routes/emdeeqRoutes')
 
 // Initialize Express app
 const app = express();
@@ -26,6 +27,8 @@ app.use(express.json());
 app.use('/api/chats', chatRoutes);
 app.use('/api/chats', messageRoutes);
 app.use('/api/email', emailSentRoutes);
+app.use('/emdeeq', emdeeqRoutes);
+
 
 async function checkApiKeyValidity() {
     try 
